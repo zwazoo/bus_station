@@ -446,7 +446,7 @@ input[type="date"],
         padding: 57px 9px 0px 0;
         border-right: 1px solid $main-color;
 
-        a{
+        a {
             letter-spacing: 1px;
         }
     }
@@ -459,7 +459,7 @@ input[type="date"],
         justify-content: center;
         margin-bottom: 36px;
 
-        svg{
+        svg {
             margin: 0 33px;
         }
     }
@@ -468,8 +468,8 @@ input[type="date"],
         margin-bottom: 58px;
         margin-left: 17px;
 
-        span{
-            margin-left:23px;
+        span {
+            margin-left: 23px;
         }
     }
 
@@ -485,6 +485,7 @@ input[type="date"],
         text-align: center;
         margin-bottom: 45px;
     }
+
     &__block-city {
         width: 60%;
         text-align: center;
@@ -539,4 +540,8 @@ input[type="date"],
     &__line {
         margin-left: 57px;
     }
+}
+
+.test-commit {
+    color: black;
 }
