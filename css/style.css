@@ -1034,6 +1034,113 @@ input[type="date"],
   .ba-button-search:hover {
     background: #00bfbf; }
 
+.ba-advantages-1 {
+  padding-bottom: 116px; }
+  .ba-advantages-1 h2 {
+    padding-bottom: 61px; }
+
+.advantages-1 {
+  padding-left: 70px; }
+
+.advantages-1-circle {
+  border: 1px solid #00D2D2;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #00D2D2;
+  width: 188px;
+  height: 188px;
+  position: relative; }
+
+.advantages-1__text {
+  color: #595656;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  z-index: 1;
+  padding-left: 17px; }
+
+.advantages-1__numeral {
+  font-weight: 600;
+  font-size: 130px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  position: absolute;
+  right: -27px;
+  z-index: 0; }
+
+.numeral-1 {
+  right: -16px; }
+
+.ba-advantages-2 {
+  background-color: #567B8D;
+  color: #fff;
+  padding-top: 27px;
+  padding-bottom: 35px; }
+  .ba-advantages-2 h2 {
+    padding-bottom: 40px; }
+
+.advantages-2__col {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.advantages-2__svg {
+  padding-top: 40px;
+  letter-spacing: 0.05em; }
+  .advantages-2__svg h4 {
+    padding-bottom: 24px; }
+  .advantages-2__svg p {
+    font-weight: 300; }
+
+.advantages-2__svg1 {
+  margin-left: -130px;
+  position: relative; }
+  .advantages-2__svg1 h4::after {
+    content: "";
+    border-right: 2px solid #fff;
+    display: inline-block;
+    height: 220px;
+    position: absolute;
+    left: 329px;
+    bottom: 60px; }
+  .advantages-2__svg1 h4 {
+    padding-top: 28px; }
+  .advantages-2__svg1 p {
+    margin-left: 28px; }
+
+.advantages-2__svg2 {
+  margin-top: -3px; }
+  .advantages-2__svg2 h4 {
+    padding-top: 18px; }
+
+.advantages-2__svg3 {
+  margin-left: 130px;
+  position: relative; }
+  .advantages-2__svg3 h4::before {
+    content: "";
+    border-right: 2px solid #fff;
+    display: inline-block;
+    height: 220px;
+    position: absolute;
+    bottom: 58px;
+    right: 313px; }
+  .advantages-2__svg3 h4 {
+    padding-top: 20px;
+    margin-left: -20px; }
+  .advantages-2__svg3 p {
+    margin-left: -21px; }
+
 .ba-footer {
   color: #F0F5F7;
   font-weight: 200;

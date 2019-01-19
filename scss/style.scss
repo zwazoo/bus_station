@@ -261,6 +261,136 @@ input[type="date"],
     }
 }
 
+//Section advantages
+
+.ba-advantages-1{
+    h2{
+        padding-bottom: 61px;
+    }
+
+    padding-bottom: 116px;
+}
+
+.advantages-1{
+    padding-left: 70px;
+
+}
+
+.advantages-1-circle{
+    border: 1px solid $interactive-color;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $interactive-color;
+    width: 188px;
+    height: 188px;
+    position: relative;
+}
+
+.advantages-1__text{
+    color: #595656;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    z-index: 1;
+    padding-left: 17px;
+
+}
+
+.advantages-1__numeral{
+    font-weight: 600;
+    font-size: 130px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    position: absolute;
+    right: -27px;
+    z-index: 0;
+}
+
+.numeral-1{
+    right: -16px
+}
+
+
+
+//-----
+.ba-advantages-2{
+    background-color: $body-color;
+    color: #fff;
+    padding-top: 27px;
+    h2{
+        padding-bottom: 40px;
+    }
+    padding-bottom: 35px;
+}
+
+.advantages-2__col{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.advantages-2__svg{
+    padding-top: 40px;
+    letter-spacing: 0.05em;
+    h4{
+        padding-bottom: 24px;
+    }
+    p{
+        font-weight: 300;
+    }
+
+}
+
+.advantages-2__svg1{
+    margin-left: -130px;
+    position: relative;
+    h4::after{
+        content: ('');
+        border-right: 2px solid #fff;
+        display: inline-block;
+        height: 220px;
+        position: absolute;
+        left: 329px;
+        bottom: 60px;
+    }
+    h4{
+        padding-top: 28px;
+    }
+    p{
+        margin-left: 28px;
+    }
+}
+
+.advantages-2__svg2{
+    margin-top: -3px;
+    h4{
+        padding-top: 18px;
+    }
+}
+
+.advantages-2__svg3{
+    margin-left: 130px;
+    position: relative;
+    h4::before{
+        content: ('');
+        border-right: 2px solid #fff;
+        display: inline-block;
+        height: 220px;
+        position: absolute;
+        bottom: 58px;
+        right: 313px;
+    }
+    h4{
+        padding-top: 20px;
+        margin-left: -20px;
+    }
+    p{
+        margin-left: -21px;
+    }
+}
+
 //Footer
 
 .ba-footer {
