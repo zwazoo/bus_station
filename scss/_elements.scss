@@ -1,0 +1,44 @@
+
+/* Typography */
+a{
+	text-decoration:none;
+	color:inherit;
+}
+p,h1,h2,h3,h4,h5,h6{
+margin:0;
+padding: 0;
+}
+h2{
+	font-size:32px;
+	font-weight:600;
+	text-align: center;
+}
+h3{
+	font-size:18px;
+	font-weight:500;
+}
+
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+	&:hover{
+		opacity:0.7;
+	}
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
