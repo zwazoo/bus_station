@@ -1,3 +1,4 @@
+//Calendar
 ;
 (function () {
 	"use strict";
@@ -14,3 +15,37 @@ $(function () {
 			$.datepicker.regional[$(this).val()]);
 	});
 });
+
+
+//Additional information of ticket
+$(document).ready(function () {
+	$('#addInf').click(function () {
+		
+	  $(this).toggleClass('open');
+
+	  if ($("#addInf").hasClass('open')) {
+		  $(".ba-ticket__additional").css('display', 'none');
+		  $("#hide-details").css('display', 'none');
+		  $("#without-details").css('color', '#00D2D2');
+		} else {
+			$(".ba-ticket__additional").css('display', 'block');
+			$("#hide-details").css('display', 'flex');
+			$("#without-details").css('color', '#193341');
+	  }
+	});
+
+	$('#addInfMore').click(function () {
+
+		if ($("#addInfMore").hasClass('open')) {
+			$(this).removeClass('open');
+			$(".ba-ticket__additional").css('display', 'none');
+			$("#hide-details").css('display', 'none');
+			$("#without-details").css('color', '#00D2D2');
+		} else {
+			$(this).addClass('open');
+			$(".ba-ticket__additional").css('display', 'block');
+			$("#hide-details").css('display', 'flex');
+			$("#without-details").css('color', '#193341');
+		  }
+	  });
+  });
