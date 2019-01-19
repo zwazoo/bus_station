@@ -177,12 +177,15 @@ div.ba-breadcrumbs__optional {
 
         a {
             letter-spacing: 1px;
-            background: url("../img/details.svg") no-repeat 73% 50%;
+            background: url("../img/details2.svg") no-repeat 73% 50%;
             display: block;
-
+            
             @media screen and (max-width: 1023px) {
                 display: none;
             }
+        }
+        a.open{
+            background: url("../img/details.svg") no-repeat 73% 50%;
         }
     }
 
@@ -301,7 +304,7 @@ div.ba-breadcrumbs__optional {
         }
     }
 
-    button {
+    &__button {
         background: $interactive-color;
         color: #FFF9F9;
         text-transform: uppercase;
@@ -309,6 +312,10 @@ div.ba-breadcrumbs__optional {
         border: none;
         padding: 10px 15px;
         margin-left: 15px;
+
+        &:hover{
+            opacity:0.7;
+        }
 
         @media screen and (min-width: 1200px) {
             padding: 15px 35px;
