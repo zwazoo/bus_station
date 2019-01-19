@@ -10,143 +10,218 @@
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/layout.css" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/jquery-ui.css" />
+    <link rel="stylesheet" href="../css/jquery-ui.structure.css" />
+    <link rel="stylesheet" href="../css/jquery-ui.theme.css" />
 
     <title>Busstation</title>
 </head>
 
 <body>
     <header>
+        <div class="ba-header">
+            <a href="../index.html" class="ba-logo">
+                <svg viewBox="0 0 225 51" x="0" y="0" width="225" height="51">
+                    <use xlink:href="#logo" x="0" y="0" width="225" height="51" />
+                </svg>
+            </a>
+            <!-- /.ba-logo -->
+
+            <ul class="ba-navigation">
+                <li><a href="../index.html">Головна</a></li>
+                <li><a href="./destinations.html">Напрямки</a></li>
+                <li><a href="./error.html">Мій кабінет</a></li>
+            </ul>
+            <!-- /.ba-navigation -->
+            <div class="ba-mobile-navigation">
+                <div class="ba-profile-img">
+                    <svg viewBox="0 0 16 16" x="0" y="0" width="16" height="16">
+                        <use xlink:href="#profile-img" x="0" y="0" width="16" height="16" />
+                    </svg>
+                </div>
+                <div class="ba-burger-box">
+                    <span class="ba-burger-inner"></span>
+                </div>
+            </div>
+            <!-- /.ba--mobile-navigation -->
+        </div>
+        <!-- /.ba-header -->
     </header>
 
     <main>
-        <div class="ba-container">
-            <div class="ba-breadcrumbs">
-                <div><a href="../index.html">Головна</a></div>
-                <div>
-                    <svg width="10" height="22" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.193236 0.225098C-0.0644132 0.528317 -0.0644131 1.02105 0.193236 1.32427L8.4219 10.9894L0.193237 20.6734C-0.0644123 20.9766 -0.0644123 21.4694 0.193237 21.7726C0.450886 22.0758 0.869566 22.0758 1.12721 21.7726L9.80676 11.5579C9.93559 11.4063 10 11.2168 10 11.0083C10 10.8188 9.93559 10.6103 9.80676 10.4587L1.12721 0.244051C0.869565 -0.0781193 0.450885 -0.0781212 0.193236 0.225098Z"
-                            fill="#00D2D2" />
-                    </svg>
-                    <a href="#">Розклад автобусів</a>
-                </div>
-                <div>
-                    <svg width="10" height="22" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.193236 0.225098C-0.0644132 0.528317 -0.0644131 1.02105 0.193236 1.32427L8.4219 10.9894L0.193237 20.6734C-0.0644123 20.9766 -0.0644123 21.4694 0.193237 21.7726C0.450886 22.0758 0.869566 22.0758 1.12721 21.7726L9.80676 11.5579C9.93559 11.4063 10 11.2168 10 11.0083C10 10.8188 9.93559 10.6103 9.80676 10.4587L1.12721 0.244051C0.869565 -0.0781193 0.450885 -0.0781212 0.193236 0.225098Z"
-                            fill="#00D2D2" />
-                    </svg>
-                    <span>Деталі</span>
-                </div>
-            </div>
-
-            <h2 class="ba-tickets-title">Розклад автобусів</h2>
-
-            <div class="ba-row ba-tickets-direction ba-row--collapse">
-                <div class="ba-col-large-3 ba-col-small-12">
-                    <div class="ba-tickets-direction__city">
-                        <span>Полтава</span>
-                        <svg class="ba-tickets-direction__line" width="70" height="8" viewBox="0 0 70 8" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M69.3536 4.35355C69.5488 4.15829 69.5488 3.84171 69.3536 3.64645L66.1716 0.464466C65.9763 0.269204 65.6597 0.269204 65.4645 0.464466C65.2692 0.659728 65.2692 0.976311 65.4645 1.17157L68.2929 4L65.4645 6.82843C65.2692 7.02369 65.2692 7.34027 65.4645 7.53553C65.6597 7.7308 65.9763 7.7308 66.1716 7.53553L69.3536 4.35355ZM0 4.5H69V3.5H0V4.5Z"
-                                fill="#2C5A71" />
-                        </svg>
-                        <span>Київ</span>
-                    </div>
-                    <svg width="284" height="16" viewBox="0 0 284 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="2" y1="10.5" x2="284" y2="10.5" stroke="#2C5A71" />
-                        <circle cx="8" cy="8" r="8" fill="#00D2D2" />
-                    </svg>
-                </div>
-                <!-- /.ba-col-3 -->
-                <div class="ba-col-large-3 ba-col-small-12 ba-tickets-info">
-                    <p class="ba-tickets-info__date">Вт. 21.08 </p>
-                    <div class="ba-tickets-info__sorting">
-                        <div class="ba-tickets-info__main">
-                            <span>Сортувати:</span>
-                            <select name="sorting">
-                                <option value="by price" selected>за ціною</option>
-                                <option value="travel time">за часом у дорозі</option>
-                                <option value="departure time">за відправленням</option>
-                            </select>
+        <section class="ba-intro">
+            <div class="ba-container">
+                <form action="#" class="ba-intro-search-form">
+                    <div class="ba-form-row ba-col-small-12 ba-col-large-4">
+                        <div class="ba-row ba-row--collapse ba-destinations">
+                            <div class="ba-repeat-img">
+                                <svg viewBox="0 0 24 24" x="0" y="0" width="24" height="24">
+                                    <use xlink:href="#repeat" x="0" y="0" width="24" height="24" />
+                                </svg>
+                            </div>
+                            <div class="ba-col-small-6 ba-col-large-6">
+                                <input type="text" placeholder="Звідки" required>
+                            </div>
+                            <div class="ba-col-small-6 ba-col-large-6">
+                                <input type="text" placeholder="Куди" required>
+                            </div>
                         </div>
-                        <!-- /.ba-tickets-info__main -->
                     </div>
-                    <!-- /.ba-tickets-info__sorting -->
-                </div>
-                <!-- /.ba-large-3 -->
+                    <!-- /.ba-form-row ba-col-small-12 ba-col-large-4-->
+                    <div class="ba-form-row ba-col-small-12 ba-col-large-4">
+
+                        <div class="ba-row">
+                            <div class="ba-col-small-6 custom-calendar">
+                                <input id="datepicker" type="text" placeholder="Дата" required>
+                                <img src="../img/small-calendar.svg" alt="calendar" class="custom-calendar-icon">
+                            </div>
+                            <div class="ba-col-small-6">
+                                <select class="seat-selection" name="seat" id="#">
+                                    <option value="" selected disabled hidden>К-сть місць</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.ba-form-row ba-col-small-12 ba-col-large-4-->
+                    <div class="ba-form-row ba-col-small-12 ba-col-large-4">
+                        <a href="tickets.html" class="ba-col-small-12 ba-button ba-button-search">Шукати</a>
+                    </div>
+                    <!-- /.ba-form-row ba-col-small-12 ba-col-large-4 -->
+                </form>
+                <!-- /.ba-intro-search-form -->
             </div>
-            <!-- /.ba-row -->
+        </section>
 
+        <section>
+            <div class="ba-container">
+                <div class="ba-breadcrumbs">
+                    <div><a href="../index.html">Головна</a></div>
+                    <div>
+                        <svg width="10" height="22" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.193236 0.225098C-0.0644132 0.528317 -0.0644131 1.02105 0.193236 1.32427L8.4219 10.9894L0.193237 20.6734C-0.0644123 20.9766 -0.0644123 21.4694 0.193237 21.7726C0.450886 22.0758 0.869566 22.0758 1.12721 21.7726L9.80676 11.5579C9.93559 11.4063 10 11.2168 10 11.0083C10 10.8188 9.93559 10.6103 9.80676 10.4587L1.12721 0.244051C0.869565 -0.0781193 0.450885 -0.0781212 0.193236 0.225098Z"
+                                fill="#00D2D2" />
+                        </svg>
+                        <a href="#">Розклад автобусів</a>
+                    </div>
+                    <div>
+                        <svg width="10" height="22" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.193236 0.225098C-0.0644132 0.528317 -0.0644131 1.02105 0.193236 1.32427L8.4219 10.9894L0.193237 20.6734C-0.0644123 20.9766 -0.0644123 21.4694 0.193237 21.7726C0.450886 22.0758 0.869566 22.0758 1.12721 21.7726L9.80676 11.5579C9.93559 11.4063 10 11.2168 10 11.0083C10 10.8188 9.93559 10.6103 9.80676 10.4587L1.12721 0.244051C0.869565 -0.0781193 0.450885 -0.0781212 0.193236 0.225098Z"
+                                fill="#00D2D2" />
+                        </svg>
+                        <span>Деталі</span>
+                    </div>
+                </div>
 
+                <h2 class="ba-tickets-title">Розклад автобусів</h2>
 
-            <div class="ba-ticket">
-                <div class="ba-row ba-ticket__main">
-                    <div class="ba-col-large-3 ba-ticket__bus">
-                        <div class="ba-ticket__cities">
-                            <span>Харків</span>
-                            <svg width="24" height="1" viewBox="0 0 24 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <line x1="4.37114e-08" y1="0.5" x2="24" y2="0.500002" stroke="#2C5A71" />
+                <div class="ba-row ba-tickets-direction ba-row--collapse">
+                    <div class="ba-col-large-3 ba-col-small-12">
+                        <div class="ba-tickets-direction__city">
+                            <span>Полтава</span>
+                            <svg class="ba-tickets-direction__line" width="70" height="8" viewBox="0 0 70 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M69.3536 4.35355C69.5488 4.15829 69.5488 3.84171 69.3536 3.64645L66.1716 0.464466C65.9763 0.269204 65.6597 0.269204 65.4645 0.464466C65.2692 0.659728 65.2692 0.976311 65.4645 1.17157L68.2929 4L65.4645 6.82843C65.2692 7.02369 65.2692 7.34027 65.4645 7.53553C65.6597 7.7308 65.9763 7.7308 66.1716 7.53553L69.3536 4.35355ZM0 4.5H69V3.5H0V4.5Z"
+                                    fill="#2C5A71" />
                             </svg>
                             <span>Київ</span>
                         </div>
-                        <p class="ba-ticket__passage">Рейс <span>1369</span></p>
-                        <a href="#">деталі</a>
-                    </div>
-                    <!-- /.ba-col-large-3 -->
-
-                    <div class="ba-col-large-3 ba-ticket__from-to">
-                        <div class="ba-ticket__block-time">
-                            <p class="ba-ticket__time">08:20</p>
-                            <p class="ba-ticket__date">Вт. 21.08</p>
-                        </div>
-                        <div class="ba-ticket__block-city">
-                            <p class="ba-ticket__city">Полтава</p>
-                            <p>від: Полтава АС-1</p>
-                        </div>
-                        <p class="ba-ticket__free-places">Вiльних місць: <span>10</span></p>
-                    </div>
-                    <!-- /.ba-col-large-3 -->
-
-                    <div class="ba-col-large-3 ba-ticket__way">
-                        <p>5 год 40 хв</p>
-                        <svg width="282" height="16" viewBox="0 0 282 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="141" cy="8" r="8" fill="#00D2D2" />
-                            <line y1="7.5" x2="282" y2="7.5" stroke="#2C5A71" />
+                        <svg width="284" height="16" viewBox="0 0 284 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="2" y1="10.5" x2="284" y2="10.5" stroke="#2C5A71" />
+                            <circle cx="8" cy="8" r="8" fill="#00D2D2" />
                         </svg>
-                        <p>у дорозі</p>
                     </div>
-                    <!-- /.ba-col-large-3 -->
-
-                    <div class="ba-col-large-3 ba-ticket__from-to">
-                        <div class="ba-ticket__block-city">
-                            <p class="ba-ticket__city">Київ</p>
-                            <p>до: Київ АВ</p>
+                    <!-- /.ba-col-3 -->
+                    <div class="ba-col-large-3 ba-col-small-12 ba-tickets-info">
+                        <p class="ba-tickets-info__date">Вт. 21.08 </p>
+                        <div class="ba-tickets-info__sorting">
+                            <div class="ba-tickets-info__main">
+                                <span>Сортувати:</span>
+                                <select name="sorting">
+                                    <option value="by price" selected>за ціною</option>
+                                    <option value="travel time">за часом у дорозі</option>
+                                    <option value="departure time">за відправленням</option>
+                                </select>
+                            </div>
+                            <!-- /.ba-tickets-info__main -->
                         </div>
-                        <div class="ba-ticket__block-time">
-                            <p class="ba-ticket__time">16:00</p>
-                            <p class="ba-ticket__date">Вт. 21.08</p>
-                        </div>
-                        <div>
-                            <span class="ba-ticket__cost">150 грн</span>
-                            <button>обрати</button>
-                        </div>
+                        <!-- /.ba-tickets-info__sorting -->
                     </div>
-                    <!-- /.ba-col-large-3 -->
+                    <!-- /.ba-large-3 -->
                 </div>
                 <!-- /.ba-row -->
 
-                <svg class="ba-ticket__line" width="1064" height="1" viewBox="0 0 1064 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line y1="0.5" x2="1064" y2="0.5" stroke="#2C5A71" stroke-opacity="0.4" />
-                </svg>
+                <div class="ba-ticket">
+                    <div class="ba-row ba-ticket__main">
+                        <div class="ba-col-large-3 ba-ticket__bus">
+                            <div class="ba-ticket__cities">
+                                <span>Харків</span>
+                                <svg width="24" height="1" viewBox="0 0 24 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="4.37114e-08" y1="0.5" x2="24" y2="0.500002" stroke="#2C5A71" />
+                                </svg>
+                                <span>Київ</span>
+                            </div>
+                            <p class="ba-ticket__passage">Рейс <span>1369</span></p>
+                            <a href="#">деталі</a>
+                        </div>
+                        <!-- /.ba-col-large-3 -->
 
-                <div class="ba-row ba-ticket__additional">
+                        <div class="ba-col-large-3 ba-ticket__from-to">
+                            <div class="ba-ticket__block-time">
+                                <p class="ba-ticket__time">08:20</p>
+                                <p class="ba-ticket__date">Вт. 21.08</p>
+                            </div>
+                            <div class="ba-ticket__block-city">
+                                <p class="ba-ticket__city">Полтава</p>
+                                <p>від: Полтава АС-1</p>
+                            </div>
+                            <p class="ba-ticket__free-places">Вiльних місць: <span>10</span></p>
+                        </div>
+                        <!-- /.ba-col-large-3 -->
 
+                        <div class="ba-col-large-3 ba-ticket__way">
+                            <p>5 год 40 хв</p>
+                            <svg width="282" height="16" viewBox="0 0 282 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="141" cy="8" r="8" fill="#00D2D2" />
+                                <line y1="7.5" x2="282" y2="7.5" stroke="#2C5A71" />
+                            </svg>
+                            <p>у дорозі</p>
+                        </div>
+                        <!-- /.ba-col-large-3 -->
+
+                        <div class="ba-col-large-3 ba-ticket__from-to">
+                            <div class="ba-ticket__block-city">
+                                <p class="ba-ticket__city">Київ</p>
+                                <p>до: Київ АВ</p>
+                            </div>
+                            <div class="ba-ticket__block-time">
+                                <p class="ba-ticket__time">16:00</p>
+                                <p class="ba-ticket__date">Вт. 21.08</p>
+                            </div>
+                            <div>
+                                <span class="ba-ticket__cost">150 грн</span>
+                                <button>обрати</button>
+                            </div>
+                        </div>
+                        <!-- /.ba-col-large-3 -->
+                    </div>
+                    <!-- /.ba-row -->
+
+                    <svg class="ba-ticket__line" width="1064" height="1" viewBox="0 0 1064 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="0.5" x2="1064" y2="0.5" stroke="#2C5A71" stroke-opacity="0.4" />
+                    </svg>
+
+                    <div class="ba-row ba-ticket__additional">
+
+                    </div>
+                    <!-- /.ba-row -->
                 </div>
-                <!-- /.ba-row -->
+                <!-- /.ba-ticket -->
+
             </div>
-            <!-- /.ba-ticket -->
-
-        </div>
-        <!-- /.ba-container -->
+            <!-- /.ba-container -->
+        </section>
     </main>
 
     <footer class="ba-footer">
@@ -235,12 +310,26 @@
                 <path d="M127.892 18.4138H129.055L134.662 31.6552H133.287L131.488 27.5173H125.459L123.766 31.6552H122.285L127.892 18.4138ZM131.171 26.3793L128.421 19.8621L125.67 26.3793H131.171Z"
                     fill="#F7F9F7" />
             </symbol>
+            <symbol id="repeat" viewBox="0 0 21 21">
+                <path d="M12.2237 7.0001L9.2442 9.16695C9.08775 9.28035 9.0531 9.49945 9.16685 9.65555C9.2351 9.75005 9.34185 9.79975 9.45035 9.79975C9.52175 9.79975 9.5935 9.7777 9.6558 9.7329L13.895 6.6501L9.6558 3.56695C9.499 3.4532 9.28025 3.4875 9.1672 3.6443C9.05345 3.8004 9.08775 4.0195 9.24455 4.1329L12.2237 6.3001H8.05C5.5412 6.3001 3.5 8.3413 3.5 10.8501C3.5 11.0437 3.65645 11.2001 3.85 11.2001C4.04355 11.2001 4.2 11.0437 4.2 10.8501C4.2 8.72735 5.92725 7.0001 8.05 7.0001H12.2237Z"
+                    fill="#605E5E" />
+                <path d="M10.5 0C4.7103 0 0 4.7103 0 10.5C0 16.2897 4.7103 21 10.5 21C16.2897 21 21 16.2897 21 10.5C21 4.7103 16.2897 0 10.5 0ZM10.5 20.3C5.09635 20.3 0.7 15.9036 0.7 10.5C0.7 5.09635 5.09635 0.7 10.5 0.7C15.9036 0.7 20.3 5.09635 20.3 10.5C20.3 15.9036 15.9036 20.3 10.5 20.3Z"
+                    fill="#605E5E" />
+                <path d="M16.7999 9.80005C16.6063 9.80005 16.4499 9.9565 16.4499 10.15C16.4499 12.2728 14.7226 14 12.5999 14H8.42613L11.4057 11.8332C11.5621 11.7198 11.5968 11.5007 11.483 11.3446C11.3696 11.1881 11.1509 11.1535 10.9944 11.2672L6.75488 14.35L10.9941 17.4332C11.0564 17.4783 11.1281 17.5 11.1995 17.5C11.308 17.5 11.4144 17.45 11.483 17.3558C11.5968 17.1997 11.5625 16.9806 11.4057 16.8672L8.42613 14.7H12.5999C15.1087 14.7 17.1499 12.6588 17.1499 10.15C17.1499 9.9565 16.9934 9.80005 16.7999 9.80005Z"
+                    fill="#605E5E" />
+            </symbol>
+            <symbol id="profile-img" viewBox="0 0 16 16">
+                <path d="M13.6569 10.3431C12.7855 9.47181 11.7484 8.82678 10.6168 8.43631C11.8288 7.60159 12.625 6.20463 12.625 4.625C12.625 2.07478 10.5502 0 8 0C5.44978 0 3.375 2.07478 3.375 4.625C3.375 6.20463 4.17122 7.60159 5.38319 8.43631C4.25163 8.82678 3.2145 9.47181 2.34316 10.3431C0.832156 11.8542 0 13.8631 0 16H1.25C1.25 12.278 4.27803 9.25 8 9.25C11.722 9.25 14.75 12.278 14.75 16H16C16 13.8631 15.1678 11.8542 13.6569 10.3431ZM8 8C6.13903 8 4.625 6.486 4.625 4.625C4.625 2.764 6.13903 1.25 8 1.25C9.86097 1.25 11.375 2.764 11.375 4.625C11.375 6.486 9.86097 8 8 8Z"
+                    fill="white" fill-opacity="0.8" />
+            </symbol>
         </defs>
     </svg>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/i18n/datepicker-uk.js"></script>
 </body>
 
 </html>
