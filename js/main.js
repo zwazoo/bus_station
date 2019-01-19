@@ -26,10 +26,11 @@ $(document).ready(function () {
 	  if ($("#addInf").hasClass('open')) {
 		  $(".ba-ticket__additional").css('display', 'none');
 		  $("#hide-details").css('display', 'none');
+		  $(".ba-breadcrumbs__optional").css('display', 'none');
 		  $("#without-details").css('color', '#00D2D2');
 		} else {
 			$(".ba-ticket__additional").css('display', 'block');
-			$("#hide-details").css('display', 'flex');
+			$(".ba-breadcrumbs__optional").css('display', 'flex');
 			$("#without-details").css('color', '#193341');
 	  }
 	});
@@ -39,12 +40,12 @@ $(document).ready(function () {
 		if ($("#addInfMore").hasClass('open')) {
 			$(this).removeClass('open');
 			$(".ba-ticket__additional").css('display', 'none');
-			$("#hide-details").css('display', 'none');
+			$(".ba-breadcrumbs__optional").css('display', 'none');
 			$("#without-details").css('color', '#00D2D2');
 		} else {
 			$(this).addClass('open');
 			$(".ba-ticket__additional").css('display', 'block');
-			$("#hide-details").css('display', 'flex');
+			$(".ba-breadcrumbs__optional").css('display', 'flex');
 			$("#without-details").css('color', '#193341');
 		  }
 	  });

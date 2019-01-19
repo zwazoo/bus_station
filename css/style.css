@@ -646,6 +646,9 @@ select {
   .ba-breadcrumbs span {
     color: #00D2D2; }
 
+div.ba-breadcrumbs__optional {
+  display: none; }
+
 .ba-tickets-title {
   margin-bottom: 47px;
   letter-spacing: 4px;
@@ -924,7 +927,8 @@ select {
         display: none; } }
   .ba-ticket__additional {
     padding-top: 70px;
-    position: relative; }
+    position: relative;
+    display: none; }
     .ba-ticket__additional:after {
       content: "";
       display: block;
