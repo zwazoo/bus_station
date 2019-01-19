@@ -27,6 +27,13 @@ body {
 .ba-container {
     padding: 0 20px;
     max-width: 1210px;
+
+    &--mobile{
+        @media screen and (max-width:640px){
+            width:100%;
+            padding: 0;      
+        }
+    }
 }
 
 .ba-hide {
@@ -155,9 +162,11 @@ body {
     padding: 39px 0px;
     margin-bottom: 20px;
 
+
     @media (min-width: 1024px) {
         display: flex;
         padding: 352px 0 116px 0;
+
 
         .ba-row {
             margin-left: 0;
@@ -166,6 +175,12 @@ body {
                 padding-left: 0;
             }
 
+        }
+    }
+
+    &--small {
+        @media screen and (min-width: 1024px) {
+            padding: 114px 0 73px 0px;
         }
     }
 
@@ -263,20 +278,20 @@ input[type="date"],
 
 //Section advantages
 
-.ba-advantages-1{
-    h2{
+.ba-advantages-1 {
+    h2 {
         padding-bottom: 61px;
     }
 
     padding-bottom: 116px;
 }
 
-.advantages-1{
+.advantages-1 {
     padding-left: 70px;
 
 }
 
-.advantages-1-circle{
+.advantages-1-circle {
     border: 1px solid $interactive-color;
     border-radius: 50%;
     display: flex;
@@ -288,7 +303,7 @@ input[type="date"],
     position: relative;
 }
 
-.advantages-1__text{
+.advantages-1__text {
     color: #595656;
     font-size: 16px;
     letter-spacing: 0.05em;
@@ -297,7 +312,7 @@ input[type="date"],
 
 }
 
-.advantages-1__numeral{
+.advantages-1__numeral {
     font-weight: 600;
     font-size: 130px;
     letter-spacing: 0.05em;
@@ -307,46 +322,51 @@ input[type="date"],
     z-index: 0;
 }
 
-.numeral-1{
+.numeral-1 {
     right: -16px
 }
 
 
 
 //-----
-.ba-advantages-2{
+.ba-advantages-2 {
     background-color: $body-color;
     color: #fff;
     padding-top: 27px;
-    h2{
+
+    h2 {
         padding-bottom: 40px;
     }
+
     padding-bottom: 35px;
 }
 
-.advantages-2__col{
+.advantages-2__col {
     text-align: center;
     display: flex;
     justify-content: center;
 
 }
 
-.advantages-2__svg{
+.advantages-2__svg {
     padding-top: 40px;
     letter-spacing: 0.05em;
-    h4{
+
+    h4 {
         padding-bottom: 24px;
     }
-    p{
+
+    p {
         font-weight: 300;
     }
 
 }
 
-.advantages-2__svg1{
+.advantages-2__svg1 {
     margin-left: -130px;
     position: relative;
-    h4::after{
+
+    h4::after {
         content: ('');
         border-right: 2px solid #fff;
         display: inline-block;
@@ -355,25 +375,29 @@ input[type="date"],
         left: 329px;
         bottom: 60px;
     }
-    h4{
+
+    h4 {
         padding-top: 28px;
     }
-    p{
+
+    p {
         margin-left: 28px;
     }
 }
 
-.advantages-2__svg2{
+.advantages-2__svg2 {
     margin-top: -3px;
-    h4{
+
+    h4 {
         padding-top: 18px;
     }
 }
 
-.advantages-2__svg3{
+.advantages-2__svg3 {
     margin-left: 130px;
     position: relative;
-    h4::before{
+
+    h4::before {
         content: ('');
         border-right: 2px solid #fff;
         display: inline-block;
@@ -382,11 +406,13 @@ input[type="date"],
         bottom: 58px;
         right: 313px;
     }
-    h4{
+
+    h4 {
         padding-top: 20px;
         margin-left: -20px;
     }
-    p{
+
+    p {
         margin-left: -21px;
     }
 }
