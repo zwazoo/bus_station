@@ -365,22 +365,7 @@ input[type="number"]::-webkit-inner-spin-button {
     align-items: center;
 }
 
-input[type="text"] {
-    &.submit-form-input {
-        &::placeholder {
-            padding-left: 5%;
-        }
-    }
 
-    background: rgba(196, 196, 196, .2);
-    border: none;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    font-size: 12px;
-    letter-spacing: 0.05em;
-    color: $main-color;
-}
 
 .ba-passenger-info {
     margin-bottom: 26px;
@@ -421,6 +406,23 @@ input[type="text"] {
     margin-top: 20px;
     background: rgba(196, 196, 196, 0.2);
     padding: 18px 20px 35px 20px;
+
+    input[type="text"] {
+        &.submit-form-input {
+            &::placeholder {
+                padding-left: 5%;
+            }
+        }
+
+        background: rgba(196, 196, 196, .2);
+        border: none;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        font-size: 12px;
+        letter-spacing: 0.05em;
+        color: $main-color;
+    }
 
 }
 
