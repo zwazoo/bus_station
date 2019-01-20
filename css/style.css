@@ -724,14 +724,17 @@ div.ba-breadcrumbs__optional {
         margin-bottom: 19px;
         letter-spacing: 1.5px; } }
   .ba-tickets-info__main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 17px;
     margin-left: -8px; }
+    @media screen and (min-width: 1024px) {
+      .ba-tickets-info__main {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
     .ba-tickets-info__main select {
-      width: 65%;
+      width: 75%;
       border: none;
       outline: none;
       -webkit-appearance: none;
@@ -743,6 +746,9 @@ div.ba-breadcrumbs__optional {
       text-align-last: center;
       cursor: pointer;
       margin-bottom: 51px; }
+      @media screen and (min-width: 1024px) {
+        .ba-tickets-info__main select {
+          width: 65%; } }
 
 .ba-ticket {
   background: rgba(196, 196, 196, 0.3);

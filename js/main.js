@@ -19,9 +19,9 @@ $(function () {
 
 //Additional information of ticket
 $(document).ready(function () {
-	$('#addInf').click(function () {
+	$('#addInf, #addInfMore').click(function () {
 
-		if ($("#addInf").hasClass('open')) {
+		if ($("#addInf, #addInfMore").hasClass('open')) {
 			$(this).removeClass('open');
 			$(".ba-ticket__additional").css('display', 'none');
 			$("#hide-details").css('display', 'none');
@@ -36,7 +36,7 @@ $(document).ready(function () {
 	});
 
 	$('#schedule').click(function () {
-			$("#addInf").removeClass('open');
+			$("#addInf, #addInfMore").removeClass('open');
 			$(".ba-ticket__additional").css('display', 'none');
 			$(".ba-breadcrumbs__optional").css('display', 'none');
 			$("#without-details").css('color', '#00D2D2');
