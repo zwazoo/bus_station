@@ -35,8 +35,8 @@
             <!-- /.ba-navigation -->
             <div class="ba-mobile-navigation">
                 <div class="ba-profile-img">
-                    <svg viewBox="0 0 16 16" x="0" y="0" width="16" height="16">
-                        <use xlink:href="#profile-img" viewBox="0 0 16 16" x="0" y="0" width="16" height="16" />
+                    <svg x="0" y="0" width="16" height="16">
+                        <use xlink:href="#profile-img" x="0" y="0" width="16" height="16" />
                     </svg>
                 </div>
                 <div class="ba-burger-box">
@@ -71,6 +71,146 @@
             </div>
             <!-- /.ba-container -->
         </section>
+
+        <section class="ba-order-details">
+            <div class="ba-container">
+                <h1 class="ba-title">Замовлення квитка</h1>
+                <div class="ba-row ba-order-details-data">
+                    <div class="ba-col-small-12 ba-col-large-6 ba-order-details__info">
+                        <h2 class="ba-subtitle">Деталі замовлення</h2>
+                        <div class="ba-col-small-12 ba-col-large-12 flex-container--center"> <span class="ba-route">Маршрут:</span>
+                            <span class="ba-order-details_city-from" data-departure="08:20, 21.08, Вт">Полтава АС1</span>
+                            <svg class="svg-line" width="24" height="1" viewBox="0 0 24 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="4.37114e-08" y1="0.5" x2="24" y2="0.500002" stroke="#2C5A71" />
+                            </svg>
+                            <span class="ba-order-details_city-to" data-arrival="14:00, 21.08,Вт">Київ АВ</span></div>
+
+                        <div class="ba-col-small-12 ba-col-large-12 flex-container--center hide-mobile ">
+                            <span class="ba-date">Час
+                                і дата:</span>
+                            <span>08:20, 21.08, Вт</span>
+                            <svg class="svg-line" width="24" height="1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="4.37114e-08" y1="0.5" x2="24" y2="0.500002" stroke="#2C5A71" />
+                            </svg>
+                            <span>14:00, 21.08,Вт</span></div>
+                    </div>
+                    <!-- /.ba-col-small-12 ba-col-large-6 ba-order-details__info-->
+                    <div class="ba-col-small-12 ba-col-large-6 ba-order-details__price">
+                        <div class="ba-col-small-12 ba-col-large-12">
+                            <div class="ba-tickets"><span class="ba-tickets-value" data-tickets-value="150"
+                                    data-tickets-currency="грн">Вартість:</span>
+                                <span class="clarification">за один квиток</span>
+                            </div>
+                        </div>
+                        <div class="ba-col-small-12 ba-col-large-12">
+                            <div class="ba-qty-row">
+                                <label class="passenger-qty-label" for="qty">К-сть пасажирів:</label>
+                                <span class="ba-input-qty">
+                                    <button class="ticket-operation" data-up>+</button>
+                                    <input class="ticket-qty" data-ticket-qty type="number" id="qty" name="qty" value="100"
+                                        min="0" max="100">
+                                    <button class="ticket-operation" data-down>-</button>
+                                </span>
+                            </div>
+                            <p class="ba-notification clarification">Перевізник не надає вибір місця</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="clarification ba-link-back">Повернутись до результатів пошуку</a>
+                <div class="section-underline"></div>
+                <div class="ba-passengers-data">
+                    <h2 class="ba-subtitle">Дані пасажирів</h2>
+                    <form class="ba-submit-form" action="#">
+                        <div class="ba-passenger-info main-passenger">
+                            <p class="ba-subtitle">Пасажир 1</p>
+                            <input class="submit-form-input" type="text" name="pass-name-main" id="pass-name"
+                                placeholder="Ім'я">
+                            <input class="submit-form-input" type="text" name="pass-surname-main" id="pass-surname"
+                                placeholder="Прізвище">
+                            <input class="submit-form-input" type="text" name="pass-phone" id="pass-phone" placeholder="Телефон">
+                            <input class="submit-form-input" type="text" name="pass-email" id="pass-email" placeholder="Email">
+                        </div>
+                        <div class="ba-passenger-info">
+                            <p class="ba-subtitle">Пасажир 2</p>
+                            <input class="submit-form-input" type="text" name="pass-name-2" id="pass-name-2"
+                                placeholder="Ім'я">
+                            <input class="submit-form-input" type="text" name="pass-surname-2" id="pass-surname-2"
+                                placeholder="Прізвище">
+                        </div>
+                        <div class="ba-submit-agreement">
+                            <input class="submit-form-input" type="checkbox" id="agreement" name="agreement" checked>
+                            <label class="ba-form-agreement" for="agreement">Я приймаю умови публічної оферти, політки
+                                конфідеційності і
+                                повернення
+                            </label>
+                        </div>
+                        <div class="section-underline"></div>
+                        <button class="ba-button ba-button-cancel">Скасувати оплату</button>
+                        <p class="ba-subtitle">
+                            До сплати: за <span data-ticket-qty>2 </span><span data-ticket-declension>квитка</span>
+                        </p>
+
+                        <button class="ba-button ba-button-summary-submit" data-summary-submit>
+                            Сума <span class="summary-text">300грн</span>
+                        </button>
+
+                        <div class="ba-payment-method">
+                            <div class="ba-payment-method-variants">
+                                <div class="payment-option">
+                                    <svg width="23" height="22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <use xlink:href="#credit-card-icon" />
+                                    </svg>
+                                    <span class="payment-method-name">Картка</span>
+                                </div>
+                                <div class="payment-option">
+                                    <svg width="21" height="22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <use xlink:href="#privat24-icon" />
+                                    </svg>
+                                    <span class="payment-method-name">Приват24</span>
+                                </div>
+                                <div class="payment-option">
+                                    <svg width="23" height="22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <use xlink:href="#liqpay-icon" />
+                                    </svg>
+                                    <span class="payment-method-name">Liqpay </span>
+                                </div>
+                                <div class="payment-option">
+                                    <svg width="22" height="22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <use xlink:href="#masterpass-icon" />
+                                    </svg>
+                                    <span class="payment-method-name">Masterpass</span>
+                                </div>
+                            </div>
+
+                            <div class="ba-row">
+                                <div class="card-number-row ba-col-small-12">
+                                    <p>Номер карти</p>
+                                    <input type="text" name="card-number" id="card-number" placeholder="XXXX XXXX XXXX XXXX">
+                                </div>
+                                <div class="card-validity ba-col-small-6">
+                                    <p>Термін дії</p>
+                                    <input type="date" name="validity" id="validity">
+                                </div>
+                                <div class="cvv-info ba-col-small-6">
+                                    <p>CVV2</p>
+                                    <input type="number" name="cvv" id="cvv" placeholder="XXXX">
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!--SECTION /.ba-order-details-->
+
     </main>
 
     <footer class="ba-footer">
@@ -171,6 +311,35 @@
                 <path d="M13.6569 10.3431C12.7855 9.47181 11.7484 8.82678 10.6168 8.43631C11.8288 7.60159 12.625 6.20463 12.625 4.625C12.625 2.07478 10.5502 0 8 0C5.44978 0 3.375 2.07478 3.375 4.625C3.375 6.20463 4.17122 7.60159 5.38319 8.43631C4.25163 8.82678 3.2145 9.47181 2.34316 10.3431C0.832156 11.8542 0 13.8631 0 16H1.25C1.25 12.278 4.27803 9.25 8 9.25C11.722 9.25 14.75 12.278 14.75 16H16C16 13.8631 15.1678 11.8542 13.6569 10.3431ZM8 8C6.13903 8 4.625 6.486 4.625 4.625C4.625 2.764 6.13903 1.25 8 1.25C9.86097 1.25 11.375 2.764 11.375 4.625C11.375 6.486 9.86097 8 8 8Z"
                     fill="white" fill-opacity="0.8" />
             </symbol>
+            <symbol id="credit-card-icon" viewBox="0 0 23 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.3923 0H2.37118C1.06419 0 0 1.02286 0 2.27912V12.3071C0 13.5634 1.06419 14.5862 2.37118 14.5862H20.3922C21.6992 14.5862 22.7634 13.5634 22.7634 12.3071V2.27912C22.7634 1.02286 21.6992 0 20.3923 0ZM21.815 12.3071C21.815 13.061 21.1767 13.6745 20.3923 13.6745H2.37118C1.58677 13.6745 0.948461 13.061 0.948461 12.3071V2.27912C0.948461 1.52518 1.58677 0.911665 2.37118 0.911665H20.3922C21.1766 0.911665 21.8149 1.52518 21.8149 2.27912V12.3071H21.815Z"
+                    fill="#00D2D2" />
+                <path d="M22.2892 2.73494H0.474253C0.212473 2.73494 0 2.93916 0 3.19077V5.92568C0 6.17729 0.212473 6.38151 0.474253 6.38151H22.2892C22.551 6.38151 22.7635 6.17729 22.7635 5.92568V3.19077C22.7634 2.93916 22.551 2.73494 22.2892 2.73494ZM21.815 5.46985H0.948461V3.64656H21.8149V5.46985H21.815Z"
+                    fill="#00D2D2" />
+                <path d="M9.01081 9.11647H3.31996C3.05818 9.11647 2.8457 9.32069 2.8457 9.5723C2.8457 9.82392 3.05818 10.0281 3.31996 10.0281H9.01081C9.27259 10.0281 9.48507 9.82387 9.48507 9.57226C9.48507 9.32065 9.27259 9.11647 9.01081 9.11647Z"
+                    fill="#00D2D2" />
+                <path d="M9.01081 10.9395H3.31996C3.05818 10.9395 2.8457 11.1437 2.8457 11.3954C2.8457 11.647 3.05818 11.8512 3.31996 11.8512H9.01081C9.27259 11.8512 9.48507 11.647 9.48507 11.3954C9.48502 11.1437 9.27259 10.9395 9.01081 10.9395Z"
+                    fill="#00D2D2" />
+                <path d="M18.4952 8.20477H17.5467C16.7623 8.20477 16.124 8.81829 16.124 9.57223V10.4838C16.124 11.2378 16.7623 11.8513 17.5467 11.8513H18.4952C19.2796 11.8513 19.9179 11.2378 19.9179 10.4838V9.57223C19.9179 8.81833 19.2796 8.20477 18.4952 8.20477ZM18.9695 10.4839C18.9695 10.7355 18.757 10.9397 18.4952 10.9397H17.5467C17.285 10.9397 17.0725 10.7355 17.0725 10.4839V9.57227C17.0725 9.32066 17.285 9.11644 17.5467 9.11644H18.4952C18.757 9.11644 18.9695 9.32066 18.9695 9.57227V10.4839Z"
+                    fill="#00D2D2" />
+            </symbol>
+            <symbol id="privat24-icon" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.8372 9C17.8372 13.6857 13.965 17.5 9.16862 17.5C4.37228 17.5 0.5 13.6857 0.5 9C0.5 4.31429 4.37228 0.5 9.16862 0.5C13.965 0.5 17.8372 4.31429 17.8372 9Z"
+                    stroke="#193341" stroke-opacity="0.7" />
+                <path d="M8.51512 10.424V11H4.09612V10.541L6.71512 7.976C7.04512 7.652 7.26712 7.373 7.38112 7.139C7.50112 6.899 7.56112 6.659 7.56112 6.419C7.56112 6.047 7.43212 5.759 7.17412 5.555C6.92212 5.345 6.55912 5.24 6.08512 5.24C5.34712 5.24 4.77412 5.474 4.36612 5.942L3.90712 5.546C4.15312 5.258 4.46512 5.036 4.84312 4.88C5.22712 4.724 5.65912 4.646 6.13912 4.646C6.78112 4.646 7.28812 4.799 7.66012 5.105C8.03812 5.405 8.22712 5.819 8.22712 6.347C8.22712 6.671 8.15512 6.983 8.01112 7.283C7.86712 7.583 7.59412 7.928 7.19212 8.318L5.05012 10.424H8.51512ZM14.9224 9.344H13.6624V11H13.0144V9.344H9.45941V8.876L12.7984 4.7H13.5184L10.2964 8.768H13.0324V7.31H13.6624V8.768H14.9224V9.344Z"
+                    fill="#193341" fill-opacity="0.7" />
+            </symbol>
+            <symbol id="liqpay-icon" viewBox="0 0 23 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.489 6.34334H20.9474V3.91405C20.9474 2.92073 19.8643 2.11561 18.5385 2.11561H18.039L18.0436 1.2129C18.0436 0.543715 17.3154 0 16.419 0H1.97476C0.896347 0 0.0140054 0.648276 0 1.45339C0 1.46036 0 1.46733 0 1.4743V13.3733C0 14.0425 0.728282 14.5862 1.62463 14.5862H18.5432C19.8737 14.5862 20.9521 13.7776 20.9521 12.7878V10.355H21.4936C22.1939 10.355 22.7635 9.92977 22.7635 9.40697V7.29136C22.7588 6.76856 22.1892 6.34334 21.489 6.34334ZM1.97476 0.836485H16.419C16.6945 0.836485 16.9232 1.00378 16.9232 1.20942L16.9185 2.11561H1.97476C1.50325 2.11561 1.12043 1.82981 1.12043 1.47779C1.12043 1.12577 1.50325 0.836485 1.97476 0.836485ZM19.827 12.7843C19.827 13.3141 19.2481 13.7462 18.5385 13.7462H1.61996C1.34452 13.7462 1.11576 13.5789 1.11576 13.3698V2.80571C1.3772 2.89981 1.66664 2.95209 1.97476 2.95209H18.5385C19.2481 2.95209 19.827 3.38428 19.827 3.91405V6.34334H16.0035C15.3033 6.34334 14.7337 6.76856 14.7337 7.29136V9.40697C14.7337 9.92977 15.3033 10.355 16.0035 10.355H19.827V12.7843ZM21.6384 9.40697C21.6384 9.46971 21.573 9.5185 21.489 9.5185H16.0082C15.9242 9.5185 15.8588 9.46971 15.8588 9.40697V7.29136C15.8588 7.23211 15.9242 7.17983 16.0082 7.17983H21.489C21.5683 7.17983 21.6384 7.22862 21.6384 7.29136V9.40697Z"
+                    fill="#193341" fill-opacity="0.7" />
+            </symbol>
+            <symbol id="masterpass-icon" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.6218 6.82759C13.6218 10.3065 10.7003 13.1552 7.06089 13.1552C3.42144 13.1552 0.5 10.3065 0.5 6.82759C0.5 3.34866 3.42144 0.5 7.06089 0.5C10.7003 0.5 13.6218 3.34866 13.6218 6.82759Z"
+                    stroke="#193341" stroke-opacity="0.7" />
+                <path d="M20.6828 6.82785C20.6828 10.3068 17.7614 13.1554 14.1219 13.1554C10.4825 13.1554 7.56104 10.3068 7.56104 6.82785C7.56104 3.34892 10.4825 0.500259 14.1219 0.500259C17.7614 0.500259 20.6828 3.34892 20.6828 6.82785Z"
+                    stroke="#193341" stroke-opacity="0.7" />
+            </symbol>
+
         </defs>
     </svg>
 
