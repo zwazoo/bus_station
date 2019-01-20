@@ -770,13 +770,13 @@ div.ba-breadcrumbs__optional {
         padding: 57px 9px 0px 0; } }
     .ba-ticket__bus a {
       letter-spacing: 1px;
-      background: url("../img/details2.svg") no-repeat 73% 50%;
+      background: url("../img/details.svg") no-repeat 73% 50%;
       display: block; }
       @media screen and (max-width: 1023px) {
         .ba-ticket__bus a {
           display: none; } }
     .ba-ticket__bus a.open {
-      background: url("../img/details.svg") no-repeat 73% 50%; }
+      background: url("../img/details2.svg") no-repeat 73% 50%; }
   .ba-ticket__cities {
     font-weight: 500;
     display: -webkit-box;
@@ -924,6 +924,8 @@ div.ba-breadcrumbs__optional {
     @media screen and (min-width: 1024px) {
       .ba-ticket__add-details {
         display: none; } }
+  .ba-ticket__add-details.open {
+    background: url("../img/details2.svg") no-repeat 65% 50%; }
   .ba-ticket__additional {
     padding-top: 70px;
     position: relative;
@@ -994,6 +996,65 @@ div.ba-breadcrumbs__optional {
 
 .ba-ticket + .ba-ticket {
   margin-top: 70px; }
+
+.ba-error {
+  text-align: center; }
+  .ba-error p {
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 70px; }
+  .ba-error a {
+    background: #00D2D2;
+    color: #fff;
+    padding: 10px 45px; }
+    .ba-error a:hover {
+      opacity: 0.7; }
+
+p.ba-error__reaction {
+  font-weight: 900;
+  font-size: 60px;
+  color: #2C5A71;
+  margin: 30px 0; }
+  @media screen and (min-width: 1024px) {
+    p.ba-error__reaction {
+      margin: 170px 0 30px; } }
+
+.ba-error-img__ufo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 20px; }
+  .ba-error-img__ufo svg {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 70%;
+    height: 70%; }
+    @media screen and (min-width: 1024px) {
+      .ba-error-img__ufo svg {
+        width: 90%;
+        height: 90%; } }
+  .ba-error-img__ufo svg:last-child {
+    margin-top: -30px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1; }
+    @media screen and (min-width: 1024px) {
+      .ba-error-img__ufo svg:last-child {
+        margin-top: -50px; } }
+
+.ba-error-img__animation {
+  -webkit-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+  -webkit-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out; }
 
 body {
   color: #193341;

@@ -177,7 +177,7 @@ div.ba-breadcrumbs__optional {
 
         a {
             letter-spacing: 1px;
-            background: url("../img/details2.svg") no-repeat 73% 50%;
+            background: url("../img/details.svg") no-repeat 73% 50%;
             display: block;
             
             @media screen and (max-width: 1023px) {
@@ -185,7 +185,7 @@ div.ba-breadcrumbs__optional {
             }
         }
         a.open{
-            background: url("../img/details.svg") no-repeat 73% 50%;
+            background: url("../img/details2.svg") no-repeat 73% 50%;
         }
     }
 
@@ -367,6 +367,9 @@ div.ba-breadcrumbs__optional {
         @media screen and (min-width: 1024px) {
             display: none;
         }
+    }
+    &__add-details.open{
+        background: url("../img/details2.svg") no-repeat 65% 50%;
     }
 
     //Additional part of ticket

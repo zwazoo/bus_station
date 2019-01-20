@@ -20,19 +20,21 @@ $(function () {
 //Additional information of ticket
 $(document).ready(function () {
 	$('#addInf').click(function () {
-		
-	  $(this).toggleClass('open');
 
-	  if ($("#addInf").hasClass('open')) {
-		  $(".ba-ticket__additional").css('display', 'none');
-		  $("#hide-details").css('display', 'none');
-		  $(".ba-breadcrumbs__optional").css('display', 'none');
-		  $("#without-details").css('color', '#00D2D2');
+		//   $(this).toggleClass('open');
+
+		if ($("#addInf").hasClass('open')) {
+			$(this).removeClass('open');
+			$(".ba-ticket__additional").css('display', 'none');
+			$("#hide-details").css('display', 'none');
+			$(".ba-breadcrumbs__optional").css('display', 'none');
+			$("#without-details").css('color', '#00D2D2');
 		} else {
+			$(this).addClass('open');
 			$(".ba-ticket__additional").css('display', 'block');
 			$(".ba-breadcrumbs__optional").css('display', 'flex');
 			$("#without-details").css('color', '#193341');
-	  }
+		}
 	});
 
 	$('#addInfMore').click(function () {
@@ -47,6 +49,14 @@ $(document).ready(function () {
 			$(".ba-ticket__additional").css('display', 'block');
 			$(".ba-breadcrumbs__optional").css('display', 'flex');
 			$("#without-details").css('color', '#193341');
-		  }
-	  });
-  });
+		}
+	});
+
+
+});
+
+
+//Animation on error page
+$(document).ready(function () {
+	$(".ba-error-img__animation").css('transform', 'rotate(0deg)');
+});

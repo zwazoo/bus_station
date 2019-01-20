@@ -1,0 +1,76 @@
+$main-color:#2C5A71;
+$body-color:#567B8D;
+$font-color:#193341;
+$interactive-color:#00D2D2;
+$interactive-color-hover:#00bfbf;
+$almost-white:#FFFAFA;
+$font-family: 'Montserrat',
+sans-serif;
+
+.ba-error {
+    text-align: center;
+
+    p {
+        font-weight: 500;
+        font-size: 30px;
+        margin-bottom: 70px;
+    }
+
+    a{
+        background: $interactive-color;
+        color:#fff;
+        padding:10px 45px;
+
+        &:hover{
+            opacity:0.7;
+        }
+    }
+
+}
+
+p.ba-error__reaction {
+    font-weight: 900;
+    font-size: 60px;
+    color: $main-color;
+    margin: 30px 0;
+
+    @media screen and (min-width:1024px){
+        margin: 170px 0 30px;  
+    }
+}
+
+.ba-error-img__ufo{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin-top: 20px;
+
+    svg{
+        position:relative;
+        z-index:2;
+        display:block;
+        width:70%;
+        height:70%;
+
+        @media screen and (min-width:1024px){
+            width:90%;
+            height:90%;
+        }
+    }
+
+    svg:last-child{
+        margin-top: -30px;
+        margin-bottom: 20px;
+        position:relative;
+        z-index:1;
+
+        @media screen and (min-width:1024px){
+            margin-top: -50px;
+        }
+    }
+}
+
+.ba-error-img__animation{
+    transform: rotate(-30deg);
+    transition: .5s ease-in-out;
+}
