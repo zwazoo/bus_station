@@ -29,9 +29,9 @@ input[type="button"],
 button,
 .ba-button{
 	display: inline-block;
-	&:hover{
-		opacity:0.7;
-	}
+	// &:hover{
+	// 	opacity:0.7;
+	// }
 }
 input[type="text"],
 input[type="email"],
