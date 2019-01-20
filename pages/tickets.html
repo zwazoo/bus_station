@@ -39,11 +39,18 @@
                         <use xlink:href="#profile-img" x="0" y="0" width="16" height="16" />
                     </svg>
                 </div>
-                <div class="ba-burger-box">
+                <a id="burger" class="ba-burger-box">
                     <span class="ba-burger-inner"></span>
-                </div>
+                </a>
             </div>
             <!-- /.ba-mobile-navigation -->
+
+            <ul class="ba-mobile-navigation-open">
+                <li><a href="../index.html">Головна</a></li>
+                <li><a href="./destinations.html">Напрямки</a></li>
+                <li><a href="./error.html">Мій кабінет</a></li>
+            </ul>
+
         </div>
         <!-- /.ba-header -->
     </header>
@@ -98,12 +105,12 @@
             <div class="ba-container ba-container--mobile">
                 <div class="ba-breadcrumbs ba-breadcrumbs--tickets">
                     <div><a href="../index.html">Головна</a></div>
-                    <div id="without-details">
+                    <div class="ba-breadcrumbs__without-details" id="without-details">
                         <svg width="10" height="22" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.193236 0.225098C-0.0644132 0.528317 -0.0644131 1.02105 0.193236 1.32427L8.4219 10.9894L0.193237 20.6734C-0.0644123 20.9766 -0.0644123 21.4694 0.193237 21.7726C0.450886 22.0758 0.869566 22.0758 1.12721 21.7726L9.80676 11.5579C9.93559 11.4063 10 11.2168 10 11.0083C10 10.8188 9.93559 10.6103 9.80676 10.4587L1.12721 0.244051C0.869565 -0.0781193 0.450885 -0.0781212 0.193236 0.225098Z"
                                 fill="#00D2D2" />
                         </svg>
-                        <a href="#">Розклад автобусів</a>
+                        <a id="schedule" href="#schedule">Розклад автобусів</a>
                     </div>
                     <div class="ba-breadcrumbs__optional" id="hide-details">
                         <svg width="10" height="22" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -206,7 +213,7 @@
                         </div>
                         <!-- /.ba-col-large-3 -->
 
-                        <a id="addInfMore" class="ba-ticket__add-details ba-col-small-12" href="#ticket">деталі</a>
+                        <a id="addInf" class="ba-ticket__add-details ba-col-small-12" href="#ticket">деталі</a>
                     </div>
                     <!-- /.ba-row -->
 

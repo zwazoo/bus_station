@@ -20,6 +20,10 @@ sans-serif;
         padding-top: 8px;
     }
 
+    &__without-details{
+        color:$interactive-color;
+    }
+
     div {
         display: inline-flex;
         align-items: center;

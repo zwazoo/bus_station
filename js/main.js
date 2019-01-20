@@ -21,8 +21,6 @@ $(function () {
 $(document).ready(function () {
 	$('#addInf').click(function () {
 
-		//   $(this).toggleClass('open');
-
 		if ($("#addInf").hasClass('open')) {
 			$(this).removeClass('open');
 			$(".ba-ticket__additional").css('display', 'none');
@@ -37,21 +35,12 @@ $(document).ready(function () {
 		}
 	});
 
-	$('#addInfMore').click(function () {
-
-		if ($("#addInfMore").hasClass('open')) {
-			$(this).removeClass('open');
+	$('#schedule').click(function () {
+			$("#addInf").removeClass('open');
 			$(".ba-ticket__additional").css('display', 'none');
 			$(".ba-breadcrumbs__optional").css('display', 'none');
 			$("#without-details").css('color', '#00D2D2');
-		} else {
-			$(this).addClass('open');
-			$(".ba-ticket__additional").css('display', 'block');
-			$(".ba-breadcrumbs__optional").css('display', 'flex');
-			$("#without-details").css('color', '#193341');
-		}
 	});
-
 
 });
 
@@ -59,4 +48,21 @@ $(document).ready(function () {
 //Animation on error page
 $(document).ready(function () {
 	$(".ba-error-img__animation").css('transform', 'rotate(0deg)');
+});
+
+//Mobile menu
+$(document).ready(function () {
+	$('#burger').click(function () {
+		if ($("#burger").hasClass('open')) {
+			$(this).removeClass('open');
+			$(".ba-mobile-navigation-open").css('display', 'none');
+			$(".ba-header").css('height', '60px');
+			
+		} else {
+			$(this).addClass('open');
+			$(".ba-mobile-navigation-open").css('display', 'flex');
+			$(".ba-header").css('height', '110px');
+		}
+
+});
 });

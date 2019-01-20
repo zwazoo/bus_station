@@ -50,6 +50,11 @@ body {
     padding: 0 50px;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width:1023px){
+        flex-wrap: wrap;
+        padding: 0 10px;
+    }
 }
 
 .ba-logo {
@@ -98,7 +103,7 @@ body {
         display: none;
     }
 
-    div+div {
+    a {
         margin-left: 21px;
     }
 }
@@ -150,6 +155,31 @@ body {
 
     }
 
+}
+
+.ba-mobile-navigation-open{
+    list-style: none;
+    width:100%;
+    margin: 0;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top:1px solid $almost-white;
+     
+
+    a {
+        color: $almost-white;
+
+        &:hover {
+            color: $interactive-color-hover;
+            font-weight: normal;
+        }
+    }
+
+    li+li{
+        margin-left:10px;
+    }
 }
 
 //section INTRO
