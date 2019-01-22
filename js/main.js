@@ -164,3 +164,36 @@ $(document).ready(function () {
     });
   }
 });
+
+// index-slider
+
+;(function ($) {
+  "use strict";
+
+  const bestSlider = $('.ba-index-slider');
+
+  bestSlider.slick({
+
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    infinite: false,
+    adaptiveHeight: true,
+    fade: false,
+    // slide: '.ba-index-slider__img',
+    prevArrow: '.ba-index-slider-prev',
+    nextArrow: '.ba-index-slider-next',
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1023,
+        settings:{
+          rows: 2,
+          slidesPerRow: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
+})(jQuery);
