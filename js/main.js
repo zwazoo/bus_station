@@ -1,21 +1,29 @@
 //Calendar
-(function() {
+(function () {
   "use strict";
 
 })();
-$("#datepicker").click(function() {
+// $("#datepicker").click(function () {
+//   $("#datepicker").datepicker();
+// });
+$("#datepicker").click(function () {
   $("#datepicker").datepicker();
+  $("#datepicker").on("change", function () {
+    sessionStorage.setItem("date", $(this).val());
+  });
 });
-$(function() {
+
+$(function () {
   $("#datepicker").datepicker($.datepicker.regional["uk"]);
-  $("#locale").on("change", function() {
+  $("#locale").on("change", function () {
     $("#datepicker").datepicker("option", $.datepicker.regional[$(this).val()]);
+
   });
 });
 
 //Additional information of ticket
-$(document).ready(function() {
-  $("#addInf, #addInfMore").click(function() {
+$(document).ready(function () {
+  $("#addInf, #addInfMore").click(function () {
     if ($("#addInf, #addInfMore").hasClass("open")) {
       $(this).removeClass("open");
       $(".ba-ticket__additional").css("display", "none");
@@ -30,7 +38,7 @@ $(document).ready(function() {
     }
   });
 
-  $("#addInfMore").click(function() {
+  $("#addInfMore").click(function () {
     if ($("#addInfMore").hasClass("open")) {
       $(this).removeClass("open");
       $(".ba-ticket__additional").css("display", "none");
@@ -43,7 +51,7 @@ $(document).ready(function() {
       $("#without-details").css("color", "#193341");
     }
   });
-  $("#schedule").click(function() {
+  $("#schedule").click(function () {
     $("#addInf, #addInfMore").removeClass("open");
     $(".ba-ticket__additional").css("display", "none");
     $(".ba-breadcrumbs__optional").css("display", "none");
@@ -52,13 +60,13 @@ $(document).ready(function() {
 });
 
 //Animation on error page
-$(document).ready(function() {
+$(document).ready(function () {
   $(".ba-error-img__animation").css("transform", "rotate(0deg)");
 });
 
 //Mobile menu
-$(document).ready(function() {
-  $("#burger").click(function() {
+$(document).ready(function () {
+  $("#burger").click(function () {
     if ($("#burger").hasClass("open")) {
       $(this).removeClass("open");
       $(".ba-mobile-navigation-open").css("display", "none");
@@ -83,21 +91,29 @@ var options = {
 };
 autocompleteFrom = new google.maps.places.Autocomplete(inputFrom, options);
 autocompleteTo = new google.maps.places.Autocomplete(inputTo, options);
-console.log(autocompleteFrom);
+
+
+
+$(".seat-selection").on("change", function () {
+  sessionStorage.setItem("seatQty", $(this).val());
+});
+
 
 autocompleteFrom.addListener("place_changed", changeToShortAddressAjax);
 autocompleteTo.addListener("place_changed", changeToShortAddressAjax);
+
+
+
 var cityFromShortName;
 var cityToShortName;
 
 function changeToShortAddressAjax() {
-  console.log("we were here");
   var cityFrom = autocompleteFrom.getPlace();
   if (cityFrom) {
     var placeFromArray = cityFrom.address_components;
     cityFromShortName = placeFromArray[0].short_name;
     $.ajax({
-      success: function() {
+      success: function () {
         $("#from-field").val(cityFromShortName);
         sessionStorage.setItem("cityFrom", cityFromShortName);
       }
@@ -110,7 +126,7 @@ function changeToShortAddressAjax() {
     cityToShortName = placeToArray[0].short_name;
 
     $.ajax({
-      success: function() {
+      success: function () {
         $("#to-field").val(cityToShortName);
         sessionStorage.setItem("cityTo", cityToShortName);
       }
@@ -120,22 +136,27 @@ function changeToShortAddressAjax() {
 ///Ticket placeSearch
 
 var currentUrlEnding = window.location.href.split("/").reverse()[0];
-$(document).ready(function() {
+$(document).ready(function () {
+  var date, seatQty;
   if (currentUrlEnding == "tickets.html") {
     tempCityFrom = sessionStorage.getItem("cityFrom");
     tempCityTo = sessionStorage.getItem("cityTo");
+    date = sessionStorage.getItem("date");
+    seatQty = sessionStorage.getItem("seatQty");
     $.ajax({
-      success: function() {
+      success: function () {
         $("#from-field").val(tempCityFrom);
         $("#to-field").val(tempCityTo);
+        $("#datepicker").val(date);
+        $(".seat-selection").val(seatQty);
       }
     });
-    $("#search-tickets").click(function(e) {
+    $("#search-tickets").click(function (e) {
       e.preventDefault();
       $.ajax({
         url: "../data/cities.json",
         dataType: "json",
-        success: function(response) {
+        success: function (response) {
           let tickets = response;
           tickets.forEach(ticket => {});
         }
