@@ -20,6 +20,10 @@ sans-serif;
         padding-top: 8px;
     }
 
+    &__without-details{
+        color:$interactive-color;
+    }
+
     div {
         display: inline-flex;
         align-items: center;
@@ -116,13 +120,17 @@ div.ba-breadcrumbs__optional {
     }
 
     &__main {
-        display: flex;
+        display: block;
         font-weight: 300;
-        font-size: 20px;
+        font-size: 17px;
         margin-left: -8px;
 
+        @media screen and (min-width:1024px){
+            display: flex;
+        }
+
         select {
-            width: 65%;
+            width: 75%;
             border: none;
             outline: none;
             appearance: none;
@@ -132,6 +140,10 @@ div.ba-breadcrumbs__optional {
             text-align-last: center;
             cursor: pointer;
             margin-bottom: 51px;
+
+            @media screen and (min-width:1024px){
+                width: 65%;
+            }
         }
     }
 }

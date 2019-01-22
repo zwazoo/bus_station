@@ -583,7 +583,8 @@ p, h1, h2, h3, h4, h5, h6 {
 h2 {
   font-size: 32px;
   font-weight: 600;
-  text-align: center; }
+  text-align: center;
+  letter-spacing: 0.05em; }
 
 h3 {
   font-size: 18px;
@@ -624,6 +625,8 @@ select {
   margin-left: 11px; }
   .ba-breadcrumbs--tickets {
     padding-top: 8px; }
+  .ba-breadcrumbs__without-details {
+    color: #00D2D2; }
   .ba-breadcrumbs div {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -722,14 +725,17 @@ div.ba-breadcrumbs__optional {
         margin-bottom: 19px;
         letter-spacing: 1.5px; } }
   .ba-tickets-info__main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 17px;
     margin-left: -8px; }
+    @media screen and (min-width: 1024px) {
+      .ba-tickets-info__main {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
     .ba-tickets-info__main select {
-      width: 65%;
+      width: 75%;
       border: none;
       outline: none;
       -webkit-appearance: none;
@@ -741,6 +747,9 @@ div.ba-breadcrumbs__optional {
       text-align-last: center;
       cursor: pointer;
       margin-bottom: 51px; }
+      @media screen and (min-width: 1024px) {
+        .ba-tickets-info__main select {
+          width: 65%; } }
 
 .ba-ticket {
   background: rgba(196, 196, 196, 0.3);
@@ -1475,6 +1484,11 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media screen and (max-width: 1023px) {
+    .ba-header {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      padding: 0 10px; } }
 
 .ba-logo svg {
   display: inline-block;
@@ -1515,7 +1529,7 @@ body {
   @media (min-width: 1024px) {
     .ba-mobile-navigation {
       display: none; } }
-  .ba-mobile-navigation div + div {
+  .ba-mobile-navigation a {
     margin-left: 21px; }
 
 .ba-burger-box {
@@ -1560,6 +1574,27 @@ body {
     background-color: #fff;
     -webkit-box-sizing: inherit;
     box-sizing: inherit; }
+
+.ba-mobile-navigation-open {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid #FFFAFA; }
+  .ba-mobile-navigation-open a {
+    color: #FFFAFA; }
+    .ba-mobile-navigation-open a:hover {
+      color: #00bfbf;
+      font-weight: normal; }
+  .ba-mobile-navigation-open li + li {
+    margin-left: 10px; }
 
 .ba-intro {
   background: url(../img/intro-bg.jpg);
@@ -1777,6 +1812,221 @@ input[type="date"],
     margin-left: -20px; }
   .advantages-2__svg3 p {
     margin-left: -21px; }
+
+.ba-advantages-1 {
+  padding-top: 10px;
+  padding-bottom: 70px; }
+  .ba-advantages-1 h2 {
+    padding-bottom: 61px; }
+  .ba-advantages-1 .ba-col-small-12 {
+    padding-bottom: 21px; }
+
+.advantages-1-circle {
+  margin: 0 auto;
+  border: 1px solid #00D2D2;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #00D2D2;
+  width: 188px;
+  height: 188px;
+  position: relative; }
+
+.advantages-1__text {
+  color: #595656;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  z-index: 1;
+  padding-left: 17px; }
+
+.advantages-1__numeral {
+  font-weight: 600;
+  font-size: 130px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  position: absolute;
+  right: -27px;
+  z-index: 0; }
+
+.numeral-1 {
+  right: -16px; }
+
+.ba-advantages-2 {
+  background-color: #567B8D;
+  color: #fff;
+  padding-top: 27px;
+  padding-bottom: 35px; }
+  .ba-advantages-2 h2 {
+    padding-bottom: 40px; }
+
+.ba-advantages-2__col {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.ba-advantages-2__svg {
+  padding-top: 40px;
+  letter-spacing: 0.05em; }
+  .ba-advantages-2__svg h4 {
+    padding-bottom: 24px; }
+  .ba-advantages-2__svg p {
+    font-weight: 300; }
+
+.ba-advantages-2__svg1 {
+  margin-left: -130px;
+  position: relative; }
+  .ba-advantages-2__svg1 h4::after {
+    content: "";
+    border-right: 2px solid #fff;
+    display: inline-block;
+    height: 220px;
+    position: absolute;
+    left: 329px;
+    bottom: 60px; }
+  .ba-advantages-2__svg1 h4 {
+    padding-top: 28px; }
+  .ba-advantages-2__svg1 p {
+    margin-left: 28px; }
+
+.ba-advantages-2__svg2 {
+  margin-top: -3px; }
+  .ba-advantages-2__svg2 h4 {
+    padding-top: 18px; }
+
+.ba-advantages-2__svg3 {
+  margin-left: 130px;
+  position: relative; }
+  .ba-advantages-2__svg3 h4::before {
+    content: "";
+    border-right: 2px solid #fff;
+    display: inline-block;
+    height: 220px;
+    position: absolute;
+    bottom: 58px;
+    right: 313px; }
+  .ba-advantages-2__svg3 h4 {
+    padding-top: 20px;
+    margin-left: -20px; }
+  .ba-advantages-2__svg3 p {
+    margin-left: -21px; }
+
+@media screen and (max-width: 1023px) {
+  .ba-advantages-2__svg {
+    margin: 0 auto; }
+    .ba-advantages-2__svg br {
+      display: none; }
+    .ba-advantages-2__svg p {
+      width: 350px; } }
+
+@media screen and (max-width: 1023px) {
+  .ba-advantages-2__svg1 {
+    padding-bottom: 30px; }
+    .ba-advantages-2__svg1 h4::after {
+      display: none; } }
+
+@media screen and (max-width: 1023px) {
+  .ba-advantages-2__svg2 {
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 30px; } }
+
+@media screen and (max-width: 1023px) {
+  .ba-advantages-2__svg3 {
+    position: relative;
+    left: 20px; }
+    .ba-advantages-2__svg3 h4::before {
+      display: none; } }
+
+.popular-trips {
+  padding-top: 42px;
+  letter-spacing: 0.05em;
+  padding-bottom: 110px; }
+  .popular-trips__more {
+    padding-top: 13px; }
+  .popular-trips__region {
+    font-size: 18px;
+    padding-top: 47px;
+    padding-bottom: 35px;
+    text-align: end; }
+  .popular-trips ul {
+    list-style-type: none;
+    padding: 0; }
+  .popular-trips li + li {
+    padding-top: 30px; }
+
+.popular-trips__cities li {
+  border-left: 2px solid #00D2D2;
+  color: #193341; }
+
+.popular-trips__cities li::before {
+  content: "";
+  border: 1px solid #00D2D2;
+  border-radius: 50%;
+  padding: 7px 7px;
+  display: inline-block;
+  background: #00D2D2;
+  margin-left: -9px;
+  margin-right: 38px; }
+
+.popular-trips__price li + li {
+  padding-top: 31.2px; }
+
+.popular-trips__last::before {
+  position: relative;
+  top: 4px; }
+
+.otstup-30 {
+  padding-top: 104px; }
+
+@media screen and (max-width: 1023px) {
+  .popular-trips__resp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .popular-trips__resp .popular-trips__line {
+      position: relative; }
+      .popular-trips__resp .popular-trips__line li::after {
+        content: "";
+        border-left: 2px solid #00D2D2;
+        height: 270px;
+        position: absolute;
+        left: 30px;
+        top: 93px; }
+    .popular-trips__resp li {
+      font-size: 12px; }
+    .popular-trips__resp .popular-trips__price li + li {
+      padding-top: 35px; }
+    .popular-trips__resp li::before {
+      margin-right: 15px; }
+    .popular-trips__resp .popular-trips__region {
+      text-align: center;
+      position: relative;
+      left: 43px; }
+    .popular-trips__resp .otstup-30 {
+      padding-left: 0;
+      padding-top: 109px; } }
+
+.popular-trips__more {
+  font-size: 14px;
+  letter-spacing: 0.05em; }
+  .popular-trips__more a {
+    padding-left: 18px;
+    position: relative;
+    top: 3px; }
 
 .ba-footer {
   color: #F0F5F7;
