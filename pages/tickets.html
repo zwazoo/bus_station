@@ -70,7 +70,7 @@
                                 <input type="text" placeholder="Звідки" required>
                             </div>
                             <div class="ba-col-small-6 ba-col-large-6">
-                                <input type="text" placeholder="Куди" required>
+                                <input class="input-city" value="" type="text" placeholder="Куди" required>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                     </div>
                     <!-- /.ba-form-row ba-col-small-12 ba-col-large-4-->
                     <div class="ba-form-row ba-col-small-12 ba-col-large-4">
-                        <a href="tickets.html" class="ba-col-small-12 ba-button ba-button-search">Шукати</a>
+                        <a href="#" class="ba-col-small-12 ba-button ba-button-search">Шукати</a>
                     </div>
                     <!-- /.ba-form-row ba-col-small-12 ba-col-large-4 -->
                 </form>
@@ -132,7 +132,11 @@
                                 <path d="M69.3536 4.35355C69.5488 4.15829 69.5488 3.84171 69.3536 3.64645L66.1716 0.464466C65.9763 0.269204 65.6597 0.269204 65.4645 0.464466C65.2692 0.659728 65.2692 0.976311 65.4645 1.17157L68.2929 4L65.4645 6.82843C65.2692 7.02369 65.2692 7.34027 65.4645 7.53553C65.6597 7.7308 65.9763 7.7308 66.1716 7.53553L69.3536 4.35355ZM0 4.5H69V3.5H0V4.5Z"
                                     fill="#2C5A71" />
                             </svg>
-                            <span>Київ</span>
+                            <span class="ba-tickets-direction__to">
+                                <script type="text/template" id="li-tmpl1">
+                                    <span>{{toCity}}</span>
+                                </script>
+                            </span>
                         </div>
                         <svg width="284" height="16" viewBox="0 0 284 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <line x1="2" y1="10.5" x2="284" y2="10.5" stroke="#2C5A71" />
@@ -141,7 +145,12 @@
                     </div>
                     <!-- /.ba-col-3 -->
                     <div class="ba-col-large-3 ba-col-small-12 ba-tickets-info">
-                        <p class="ba-tickets-info__date">Вт. 21.08 </p>
+                        <div class="ba-tickets-date">
+                            <script type="text/template" id="li-tmpl0">
+                            <p class="ba-tickets-info__date">{{date0}}</p>
+                            </script>
+                        </div>
+                        <!-- /.ba-tickets -->
                         <div class="ba-tickets-info__sorting">
                             <div class="ba-tickets-info__main">
                                 <span>Сортувати:</span>
@@ -159,116 +168,123 @@
                 </div>
                 <!-- /.ba-row -->
 
-                <div class="ba-ticket">
-                    <div class="ba-row ba-ticket__main">
-                        <div class="ba-col-large-3 ba-col-medium-12 ba-col-small-12 ba-ticket__bus">
-                            <div class="ba-ticket__cities">
-                                <span>Харків</span>
-                                <svg width="24" height="1" viewBox="0 0 24 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <line x1="4.37114e-08" y1="0.5" x2="24" y2="0.500002" stroke="#2C5A71" />
-                                </svg>
-                                <span>Київ</span>
+                <ul class="ba-tickets">
+                    <script type="text/template" id="li-tmpl">
+                        <li class="ba-tickets__item">
+                        <div class="ba-ticket">
+                            <div class="ba-row ba-ticket__main">
+                                <div class="ba-col-large-3 ba-col-medium-12 ba-col-small-12 ba-ticket__bus">
+                                    <div class="ba-ticket__cities">
+                                        <span>Полтава</span>
+                                        <svg width="24" height="1" viewBox="0 0 24 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <line x1="4.37114e-08" y1="0.5" x2="24" y2="0.500002" stroke="#2C5A71" />
+                                        </svg>
+                                        <span>{{city}}</span>
+                                    </div>
+                                    <p class="ba-ticket__passage">Рейс <span>{{trip}}</span></p>
+                                    <a href="#ticket" id="addInf">деталі</a>
+                                </div>
+                                <!-- /.ba-col-large-3 -->
+        
+                                <div class="ba-col-large-3 ba-col-medium-4 ba-col-small-12 ba-ticket__from-to">
+                                    <div class="ba-ticket__block-time">
+                                        <p class="ba-ticket__time">{{departuretime}}</p>
+                                        <p class="ba-ticket__date">{{date}}</p>
+                                    </div>
+                                    <div class="ba-ticket__block-city">
+                                        <p class="ba-ticket__city">Полтава</p>
+                                        <p>від: Полтава АС-1</p>
+                                    </div>
+                                    <p class="ba-ticket__free-places">Вiльних місць: <span>10</span></p>
+                                </div>
+                                <!-- /.ba-col-large-3 -->
+        
+                                <div class="ba-col-large-3 ba-col-medium-4 ba-col-small-12 ba-ticket__way">
+                                    <p>{{time}}</p>
+                                    <svg width="282" height="16" viewBox="0 0 282 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="141" cy="8" r="8" fill="#00D2D2" />
+                                        <line y1="7.5" x2="282" y2="7.5" stroke="#2C5A71" />
+                                    </svg>
+                                    <p>у дорозі</p>
+                                </div>
+                                <!-- /.ba-col-large-3 -->
+        
+                                <div class="ba-col-large-3 ba-col-medium-4 ba-col-small-12 ba-ticket__from-to ba-ticket__from-to--destination">
+                                    <div class="ba-ticket__block-city">
+                                        <p class="ba-ticket__city">{{city}}</p>
+                                        <p>до: {{station}}</p>
+                                    </div>
+                                    <div class="ba-ticket__block-time">
+                                        <p class="ba-ticket__time">{{arrivaltime}}</p>
+                                        <p class="ba-ticket__date">{{date}}</p>
+                                    </div>
+                                    <div class="ba-ticket__cost-block">
+                                        <span class="ba-ticket__cost">{{cost}}</span>
+                                        <a class="ba-ticket__button" href="./order.html">обрати</a>
+                                    </div>
+                                </div>
+                                <!-- /.ba-col-large-3 -->
+        
+                                <a id="addInfMore" class="ba-ticket__add-details ba-col-small-12" href="#ticket">деталі</a>
                             </div>
-                            <p class="ba-ticket__passage">Рейс <span>1369</span></p>
-                            <a href="#ticket" id="addInf">деталі</a>
+                            <!-- /.ba-row -->
+        
+                            <div id="ticket" class="ba-ticket__additional">
+                                <div class="ba-row ba-ticket__dest-line">
+                                    <div class="ba-col-3">
+                                        <p class="ba-ticket__dest-line-time ba-ticket__dest-line-time--main">{{departuretime}}</p>
+                                        <svg width="16" height="16">
+                                            <use xlink:href="#point" />
+                                        </svg>
+                                        <p class="ba-ticket__dest-line-city ba-ticket__dest-line-city--main">Полтава</p>
+                                    </div>
+                                    <div class="ba-col-2">
+                                        <p class="ba-ticket__dest-line-time"></p>
+                                        <svg width="16" height="16">
+                                            <use xlink:href="#point" />
+                                        </svg>
+                                        <p class="ba-ticket__dest-line-city">{{city1}}</p>
+                                    </div>
+                                    <div class="ba-col-2">
+                                        <p class="ba-ticket__dest-line-time"></p>
+                                        <svg width="16" height="16">
+                                            <use xlink:href="#point" />
+                                        </svg>
+                                        <p class="ba-ticket__dest-line-city">{{city2}}</p>
+                                    </div>
+                                    <div class="ba-col-2">
+                                        <p class="ba-ticket__dest-line-time"></p>
+                                        <svg width="16" height="16">
+                                            <use xlink:href="#point" />
+                                        </svg>
+                                        <p class="ba-ticket__dest-line-city">{{city3}}</p>
+                                    </div>
+                                    <div class="ba-col-3">
+                                        <p class="ba-ticket__dest-line-time ba-ticket__dest-line-time--main">{{arrivaltime}}</p>
+                                        <svg width="16" height="16">
+                                            <use xlink:href="#point" />
+                                        </svg>
+                                        <p class="ba-ticket__dest-line-city ba-ticket__dest-line-city--main">{{city}}</p>
+                                    </div>
+                                </div>
+                                <!-- /.ba-ticket__dest-line -->
+                                <div class="ba-row ba-ticket__about-bus">
+                                    <div class="ba-col-large-4 ba-col-medium-6 ba-col-small-6 ba-ticket__carrier">
+                                        <p>Перевізник: {{carrier}}</p>
+                                    </div>
+                                    <div class="ba-col-large-3 ba-col-medium-6 ba-col-small-6 ba-ticket__bus-model">
+                                        <p>Модель автобусу: {{bus}}</p>
+                                    </div>
+                                </div>
+                                <!-- /.ba-ticket__about-bus -->
+                            </div>
+                            <!-- /.ba-row -->
                         </div>
-                        <!-- /.ba-col-large-3 -->
-
-                        <div class="ba-col-large-3 ba-col-medium-4 ba-col-small-12 ba-ticket__from-to">
-                            <div class="ba-ticket__block-time">
-                                <p class="ba-ticket__time">08:20</p>
-                                <p class="ba-ticket__date">Вт. 21.08</p>
-                            </div>
-                            <div class="ba-ticket__block-city">
-                                <p class="ba-ticket__city">Полтава</p>
-                                <p>від: Полтава АС-1</p>
-                            </div>
-                            <p class="ba-ticket__free-places">Вiльних місць: <span>10</span></p>
-                        </div>
-                        <!-- /.ba-col-large-3 -->
-
-                        <div class="ba-col-large-3 ba-col-medium-4 ba-col-small-12 ba-ticket__way">
-                            <p>5 год 40 хв</p>
-                            <svg width="282" height="16" viewBox="0 0 282 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="141" cy="8" r="8" fill="#00D2D2" />
-                                <line y1="7.5" x2="282" y2="7.5" stroke="#2C5A71" />
-                            </svg>
-                            <p>у дорозі</p>
-                        </div>
-                        <!-- /.ba-col-large-3 -->
-
-                        <div class="ba-col-large-3 ba-col-medium-4 ba-col-small-12 ba-ticket__from-to ba-ticket__from-to--destination">
-                            <div class="ba-ticket__block-city">
-                                <p class="ba-ticket__city">Київ</p>
-                                <p>до: Київ АВ</p>
-                            </div>
-                            <div class="ba-ticket__block-time">
-                                <p class="ba-ticket__time">16:00</p>
-                                <p class="ba-ticket__date">Вт. 21.08</p>
-                            </div>
-                            <div class="ba-ticket__cost-block">
-                                <span class="ba-ticket__cost">150 грн</span>
-                                <a class="ba-ticket__button" href="./order.html">обрати</a>
-                            </div>
-                        </div>
-                        <!-- /.ba-col-large-3 -->
-
-                        <a id="addInfMore" class="ba-ticket__add-details ba-col-small-12" href="#ticket">деталі</a>
-                    </div>
-                    <!-- /.ba-row -->
-
-                    <div id="ticket" class="ba-ticket__additional">
-                        <div class="ba-row ba-ticket__dest-line">
-                            <div class="ba-col-3">
-                                <p class="ba-ticket__dest-line-time ba-ticket__dest-line-time--main">08:20</p>
-                                <svg width="16" height="16">
-                                    <use xlink:href="#point" />
-                                </svg>
-                                <p class="ba-ticket__dest-line-city ba-ticket__dest-line-city--main">Полтава</p>
-                            </div>
-                            <div class="ba-col-2">
-                                <p class="ba-ticket__dest-line-time"></p>
-                                <svg width="16" height="16">
-                                    <use xlink:href="#point" />
-                                </svg>
-                                <p class="ba-ticket__dest-line-city">Лубни АС</p>
-                            </div>
-                            <div class="ba-col-2">
-                                <p class="ba-ticket__dest-line-time"></p>
-                                <svg width="16" height="16">
-                                    <use xlink:href="#point" />
-                                </svg>
-                                <p class="ba-ticket__dest-line-city">Пирятин АС-1</p>
-                            </div>
-                            <div class="ba-col-2">
-                                <p class="ba-ticket__dest-line-time"></p>
-                                <svg width="16" height="16">
-                                    <use xlink:href="#point" />
-                                </svg>
-                                <p class="ba-ticket__dest-line-city">Бориспіль АЕ</p>
-                            </div>
-                            <div class="ba-col-3">
-                                <p class="ba-ticket__dest-line-time ba-ticket__dest-line-time--main">14:00</p>
-                                <svg width="16" height="16">
-                                    <use xlink:href="#point" />
-                                </svg>
-                                <p class="ba-ticket__dest-line-city ba-ticket__dest-line-city--main">Київ</p>
-                            </div>
-                        </div>
-                        <!-- /.ba-ticket__dest-line -->
-                        <div class="ba-row ba-ticket__about-bus">
-                            <div class="ba-col-large-4 ba-col-medium-6 ba-col-small-6 ba-ticket__carrier">
-                                <p>Перевізник: ПП “Антонець”</p>
-                            </div>
-                            <div class="ba-col-large-3 ba-col-medium-6 ba-col-small-6 ba-ticket__bus-model">
-                                <p>Модель автобусу: Неоплан</p>
-                            </div>
-                        </div>
-                        <!-- /.ba-ticket__about-bus -->
-                    </div>
-                    <!-- /.ba-row -->
-                </div>
-                <!-- /.ba-ticket -->
+                        <!-- /.ba-ticket -->
+                    </li>
+                    </script>
+                </ul>
+                <!-- /.ba-tickets -->
 
             </div>
             <!-- /.ba-container -->
@@ -382,6 +398,7 @@
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/slick.min.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/search.js"></script>
     <script src="../js/jquery-ui.js"></script>
     <script src="../js/i18n/datepicker-uk.js"></script>
 </body>
