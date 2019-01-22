@@ -101,6 +101,7 @@ function changeToShortAddressAjax() {
 	var cityFrom = autocompleteFrom.getPlace();
 	var placeFromArray = cityFrom.address_components;
 	let cityFromShortName = placeFromArray[0].short_name;
+	console.log(placeFromArray);
 
 	$.ajax({
 		success: function () {
