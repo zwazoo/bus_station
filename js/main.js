@@ -90,12 +90,14 @@ var options = {
 };
 autocompleteFrom = new google.maps.places.Autocomplete(inputFrom, options);
 autocompleteTo = new google.maps.places.Autocomplete(inputTo, options);
+console.log(autocompleteFrom);
 
 
 autocompleteFrom.addListener("place_changed", changeToShortAddressAjax);
 autocompleteTo.addListener("place_changed", changeToShortAddressAjax);
 
 function changeToShortAddressAjax() {
+	console.log('we were here')
 	var cityFrom = autocompleteFrom.getPlace();
 	var placeFromArray = cityFrom.address_components;
 	let cityFromShortName = placeFromArray[0].short_name;
