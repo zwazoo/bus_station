@@ -155,7 +155,7 @@
                         <div class="ba-tickets-info__sorting">
                             <div class="ba-tickets-info__main">
                                 <span>Сортувати:</span>
-                                <select name="sorting">
+                                <select name="sorting" class="ba-tickets-info__select">
                                     <option value="by price" selected>за ціною</option>
                                     <option value="travel time">за часом у дорозі</option>
                                     <option value="departure time">за відправленням</option>
@@ -220,7 +220,7 @@
                                         <p class="ba-ticket__date">{{date}}</p>
                                     </div>
                                     <div class="ba-ticket__cost-block">
-                                        <span class="ba-ticket__cost">{{cost}}</span>
+                                        <span data-cost="price" class="ba-ticket__cost">{{cost}}</span>
                                         <a class="ba-ticket__button" href="./order.html">обрати</a>
                                     </div>
                                 </div>
@@ -240,21 +240,21 @@
                                         <p class="ba-ticket__dest-line-city ba-ticket__dest-line-city--main">Полтава</p>
                                     </div>
                                     <div class="ba-col-2">
-                                        <p class="ba-ticket__dest-line-time"> </p>
+                                        <p class="ba-ticket__dest-line-time"> - </p>
                                         <svg width="16" height="16">
                                             <use xlink:href="#point" />
                                         </svg>
                                         <p class="ba-ticket__dest-line-city">{{city1}}</p>
                                     </div>
                                     <div class="ba-col-2">
-                                        <p class="ba-ticket__dest-line-time"> </p>
+                                        <p class="ba-ticket__dest-line-time"> - </p>
                                         <svg width="16" height="16">
                                             <use xlink:href="#point" />
                                         </svg>
                                         <p class="ba-ticket__dest-line-city">{{city2}}</p>
                                     </div>
                                     <div class="ba-col-2">
-                                        <p class="ba-ticket__dest-line-time"></p>
+                                        <p class="ba-ticket__dest-line-time"> - </p>
                                         <svg width="16" height="16">
                                             <use xlink:href="#point" />
                                         </svg>
