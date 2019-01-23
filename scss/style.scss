@@ -30,10 +30,10 @@ body {
     padding: 0 20px;
     max-width: 1210px;
 
-    &--mobile{
-        @media screen and (max-width:640px){
-            width:100%;
-            padding: 0;      
+    &--mobile {
+        @media screen and (max-width: 640px) {
+            width: 100%;
+            padding: 0;
         }
     }
 }
@@ -52,7 +52,7 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    @media screen and (max-width:1023px){
+    @media screen and (max-width: 1023px) {
         flex-wrap: wrap;
         padding: 0 10px;
     }
@@ -158,16 +158,16 @@ body {
 
 }
 
-.ba-mobile-navigation-open{
+.ba-mobile-navigation-open {
     list-style: none;
-    width:100%;
+    width: 100%;
     margin: 0;
     display: none;
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
-    border-top:1px solid $almost-white;
-     
+    border-top: 1px solid $almost-white;
+
 
     a {
         color: $almost-white;
@@ -178,8 +178,8 @@ body {
         }
     }
 
-    li+li{
-        margin-left:10px;
+    li+li {
+        margin-left: 10px;
     }
 }
 
@@ -234,6 +234,7 @@ input[type="date"],
 .seat-selection {
     height: 52px;
     width: 100%;
+    padding-left: 10%;
 
     &::placeholder {
         padding-left: 10%;
@@ -455,9 +456,11 @@ input[type="date"],
 .ba-advantages-2__svg {
     @media screen and (max-width: 1023px) {
         margin: 0 auto;
+
         br {
             display: none;
         }
+
         p {
             width: 350px;
         }
@@ -469,6 +472,7 @@ input[type="date"],
         h4::after {
             display: none;
         }
+
         padding-bottom: 30px;
     }
 }
@@ -485,6 +489,7 @@ input[type="date"],
     @media screen and (max-width: 1023px) {
         position: relative;
         left: 20px;
+
         h4::before {
             display: none;
         }
@@ -516,7 +521,7 @@ input[type="date"],
         padding: 0;
     }
 
-    li + li {
+    li+li {
         padding-top: 30px;
     }
 }
@@ -542,7 +547,7 @@ input[type="date"],
 
 
 .popular-trips__price {
-    li + li {
+    li+li {
         padding-top: 31.2px;
     }
 }
@@ -559,6 +564,7 @@ input[type="date"],
 
 .popular-trips__resp {
     padding-bottom: 110px;
+
     @media screen and (max-width: 1023px) {
         display: flex;
         justify-content: center;
@@ -582,7 +588,7 @@ input[type="date"],
         }
 
         .popular-trips__price {
-            li + li {
+            li+li {
                 padding-top: 35px;
             }
         }
@@ -737,39 +743,39 @@ input[type="date"],
 }
 
 @media screen and (max-width: 1023px) {
-    .slick-track{
-
-    }
+    .slick-track {}
 }
 
 
 //section ba-app
 
-.ba-app{
+.ba-app {
     padding-top: 68px;
     padding-bottom: 41px;
 
-    .ba-app-text__small{
+    .ba-app-text__small {
         display: none;
     }
 
-    img{
+    img {
         height: 491px;
         width: 94%;
         object-fit: cover;
     }
-    .ba-app__text{
+
+    .ba-app__text {
 
         padding-top: 122px;
         padding-left: 30px;
 
-        h3{
+        h3 {
             font-weight: 600;
             font-size: 32px;
             letter-spacing: 0.05em;
             padding-bottom: 12px;
         }
-        p{
+
+        p {
             font-weight: 500;
             font-size: 18px;
             letter-spacing: 0.05em;
@@ -777,13 +783,15 @@ input[type="date"],
         }
     }
 
-    .ba-app__googfon{
+    .ba-app__googfon {
         display: flex;
         margin-left: -122px;
         padding-top: 71px;
-        a{
+
+        a {
             margin-left: 50px;
-            svg{
+
+            svg {
                 max-width: 100%;
                 height: auto;
             }
@@ -792,29 +800,31 @@ input[type="date"],
 }
 
 @media screen and (max-width: 1023px) {
-    .ba-app{
+    .ba-app {
         padding-top: 21px;
 
-        .ba-app-text__small{
+        .ba-app-text__small {
             display: flex;
             justify-content: center;
         }
 
-        img{
+        img {
             height: 100%;
             width: 100%;
         }
 
-        .ba-app__text{
+        .ba-app__text {
             display: none;
         }
 
-        .ba-app__googfon{
+        .ba-app__googfon {
             margin: 0;
-            a{
+
+            a {
                 margin: 0 auto;
             }
-            a + a {
+
+            a+a {
                 margin-left: 20px;
             }
         }
