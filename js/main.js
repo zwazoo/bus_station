@@ -33,19 +33,6 @@ $(document).ready(function () {
 		}
 	});
 
-	$("#addInfMore").click(function () {
-		if ($("#addInfMore").hasClass("open")) {
-			$(this).removeClass("open");
-			$(".ba-ticket__additional").css("display", "none");
-			$(".ba-breadcrumbs__optional").css("display", "none");
-			$("#without-details").css("color", "#00D2D2");
-		} else {
-			$(this).addClass("open");
-			$(".ba-ticket__additional").css("display", "block");
-			$(".ba-breadcrumbs__optional").css("display", "flex");
-			$("#without-details").css("color", "#193341");
-		}
-	});
 	$('#schedule').click(function () {
 		$("#addInf, #addInfMore").removeClass('open');
 		$(".ba-ticket__additional").css('display', 'none');
