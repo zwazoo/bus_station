@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600&subset=cyrillic");
 /* Slider */
 .slick-slider {
@@ -1388,6 +1389,9 @@ input[type="number"]::-webkit-inner-spin-button {
     flex-direction: column; }
     .ba-payment-method-variants .payment-option .payment-method-name {
       font-size: 6px; }
+      @media (min-width: 1024px) {
+        .ba-payment-method-variants .payment-option .payment-method-name {
+          font-size: 14px; } }
 
 .ba-submit-agreement {
   display: -webkit-box;
@@ -1405,6 +1409,9 @@ input[type="number"]::-webkit-inner-spin-button {
 .ba-form-agreement {
   font-size: 9px;
   color: #2C5A71; }
+  @media (min-width: 1024px) {
+    .ba-form-agreement {
+      font-size: 14px; } }
 
 .ba-button.ba-button-summary-submit {
   height: 60px;
@@ -1412,6 +1419,11 @@ input[type="number"]::-webkit-inner-spin-button {
   color: #2C5A71;
   border: none;
   background: rgba(196, 196, 196, 0.2); }
+  @media (min-width: 1024px) {
+    .ba-button.ba-button-summary-submit {
+      height: 165px;
+      font-size: 25px;
+      width: 100%; } }
 
 .summary-text {
   padding-top: 5px;
@@ -1421,6 +1433,25 @@ input[type="number"]::-webkit-inner-spin-button {
   font-size: 16px;
   letter-spacing: 0.05em;
   color: #00D2D2; }
+  @media (min-width: 1024px) {
+    .summary-text {
+      font-weight: 500;
+      line-height: normal;
+      font-size: 50px; } }
+
+.submit-form-input {
+  background: rgba(196, 196, 196, 0.2);
+  border: none;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: #2C5A71;
+  outline: none; }
+  @media (min-width: 1024px) {
+    .submit-form-input {
+      font-size: 18px; } }
 
 .ba-payment-method {
   margin-top: 20px;
@@ -1443,6 +1474,14 @@ input[type="number"]::-webkit-inner-spin-button {
       padding-left: 5%; }
     .ba-payment-method input[type="text"].submit-form-input::placeholder {
       padding-left: 5%; }
+  @media (min-width: 1024px) {
+    .ba-payment-method {
+      margin-top: 0;
+      padding: 50px 108px 0px 130px; } }
+  @media (min-width: 1024px) {
+    .ba-payment-method svg {
+      width: 72px;
+      height: 47px; } }
 
 .card-number-row,
 .card-validity,
@@ -1459,6 +1498,12 @@ input[type="number"]::-webkit-inner-spin-button {
     letter-spacing: 0.05em;
     color: rgba(44, 90, 113, 0.8);
     height: 40px !important; }
+    @media (min-width: 1024px) {
+      .card-number-row input,
+      .card-validity input,
+      .cvv-info input {
+        width: 100%;
+        font-size: 20px; } }
   .card-number-row p,
   .card-validity p,
   .cvv-info p {
@@ -1467,6 +1512,11 @@ input[type="number"]::-webkit-inner-spin-button {
     font-size: 10px;
     letter-spacing: 0.05em;
     color: #2C5A71; }
+    @media (min-width: 1024px) {
+      .card-number-row p,
+      .card-validity p,
+      .cvv-info p {
+        font-size: 16px; } }
 
 .ba-submit-form {
   margin-bottom: 32px; }
@@ -1477,6 +1527,58 @@ input[type="number"]::-webkit-inner-spin-button {
   line-height: normal;
   font-size: 12px;
   text-align: center; }
+
+.ba-qr-code {
+  position: relative; }
+  .ba-qr-code:before {
+    content: 'Оплата в один клік';
+    font-size: 16px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: -10%;
+    min-width: 200px; }
+  .ba-qr-code:after {
+    content: 'Використайте додаток';
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: -10%;
+    min-width: 200px; }
+
+.ba-qr-code-container {
+  display: none; }
+  @media (min-width: 1024px) {
+    .ba-qr-code-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 64px 77px 78px 102px;
+      margin-top: 30px;
+      width: 100%;
+      background: rgba(196, 196, 196, 0.2); } }
+
+#card-number {
+  font-size: 20px;
+  background: transparent;
+  border-bottom: 1px solid #2C5A71; }
+
+.ba-button-bottom-payment {
+  width: 261px;
+  height: 48px;
+  background: #00D2D2;
+  text-align: center;
+  line-height: 48px; }
 
 .ba-error {
   text-align: center; }
@@ -1705,33 +1807,58 @@ body {
       .ba-intro-search-form .ba-form-row + .ba-form-row {
         margin-top: 0; } }
 
+#from-field,
+#to-field,
+#datepicker,
+.seat-selection {
+  padding-left: 10%;
+  width: 100%; }
+  #from-field::-webkit-input-placeholder,
+  #to-field::-webkit-input-placeholder,
+  #datepicker::-webkit-input-placeholder,
+  .seat-selection::-webkit-input-placeholder {
+    padding-left: 5%; }
+  #from-field:-ms-input-placeholder,
+  #to-field:-ms-input-placeholder,
+  #datepicker:-ms-input-placeholder,
+  .seat-selection:-ms-input-placeholder {
+    padding-left: 5%; }
+  #from-field::-ms-input-placeholder,
+  #to-field::-ms-input-placeholder,
+  #datepicker::-ms-input-placeholder,
+  .seat-selection::-ms-input-placeholder {
+    padding-left: 5%; }
+  #from-field::placeholder,
+  #to-field::placeholder,
+  #datepicker::placeholder,
+  .seat-selection::placeholder {
+    padding-left: 5%; }
+
 .ba-button,
 input[type="text"],
 input[type="date"],
 .seat-selection {
-  height: 52px;
-  width: 100%;
-  padding-left: 10%; }
+  height: 52px; }
   .ba-button::-webkit-input-placeholder,
   input[type="text"]::-webkit-input-placeholder,
   input[type="date"]::-webkit-input-placeholder,
   .seat-selection::-webkit-input-placeholder {
-    padding-left: 10%; }
+    padding-left: 5%; }
   .ba-button:-ms-input-placeholder,
   input[type="text"]:-ms-input-placeholder,
   input[type="date"]:-ms-input-placeholder,
   .seat-selection:-ms-input-placeholder {
-    padding-left: 10%; }
+    padding-left: 5%; }
   .ba-button::-ms-input-placeholder,
   input[type="text"]::-ms-input-placeholder,
   input[type="date"]::-ms-input-placeholder,
   .seat-selection::-ms-input-placeholder {
-    padding-left: 10%; }
+    padding-left: 5%; }
   .ba-button::placeholder,
   input[type="text"]::placeholder,
   input[type="date"]::placeholder,
   .seat-selection::placeholder {
-    padding-left: 10%; }
+    padding-left: 5%; }
 
 .seat-selection {
   background: #fff;

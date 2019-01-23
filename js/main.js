@@ -195,5 +195,5 @@ $(document).ready(function () {
       }
     ]
   });
-
+ 
 })(jQuery);

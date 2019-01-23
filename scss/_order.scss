@@ -356,6 +356,10 @@ input[type="number"]::-webkit-inner-spin-button {
 
         .payment-method-name {
             font-size: 6px;
+
+            @media(min-width: 1024px) {
+                font-size: 14px;
+            }
         }
     }
 }
@@ -378,6 +382,10 @@ input[type="number"]::-webkit-inner-spin-button {
 .ba-form-agreement {
     font-size: 9px;
     color: $main-color;
+
+    @media(min-width: 1024px) {
+        font-size: 14px;
+    }
 }
 
 .ba-button {
@@ -387,6 +395,12 @@ input[type="number"]::-webkit-inner-spin-button {
         color: $main-color;
         border: none;
         background: rgba(196, 196, 196, 0.2);
+
+        @media(min-width: 1024px) {
+            height: 165px;
+            font-size: 25px;
+            width: 100%;
+        }
 
     }
 
@@ -400,6 +414,29 @@ input[type="number"]::-webkit-inner-spin-button {
     font-size: 16px;
     letter-spacing: 0.05em;
     color: #00D2D2;
+
+    @media(min-width: 1024px) {
+        font-weight: 500;
+        line-height: normal;
+        font-size: 50px;
+    }
+}
+
+.submit-form-input {
+
+    background: rgba(196, 196, 196, .2);
+    border: none;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: $main-color;
+    outline: none;
+
+    @media (min-width: 1024px) {
+        font-size: 18px;
+    }
 }
 
 .ba-payment-method {
@@ -424,6 +461,20 @@ input[type="number"]::-webkit-inner-spin-button {
         color: $main-color;
     }
 
+    @media(min-width:1024px) {
+        margin-top: 0;
+        padding: 50px 108px 0px 130px;
+
+    }
+
+    svg {
+        @media(min-width: 1024px) {
+            width: 72px;
+            height: 47px;
+        }
+
+    }
+
 }
 
 .card-number-row,
@@ -440,6 +491,11 @@ input[type="number"]::-webkit-inner-spin-button {
         letter-spacing: 0.05em;
         color: rgba(44, 90, 113, 0.8);
         height: 40px !important;
+
+        @media(min-width: 1024px) {
+            width: 100%;
+            font-size: 20px;
+        }
     }
 
     p {
@@ -448,6 +504,10 @@ input[type="number"]::-webkit-inner-spin-button {
         font-size: 10px;
         letter-spacing: 0.05em;
         color: $main-color;
+
+        @media(min-width: 1024px) {
+            font-size: 16px;
+        }
     }
 }
 
@@ -461,4 +521,59 @@ input[type="number"]::-webkit-inner-spin-button {
     line-height: normal;
     font-size: 12px;
     text-align: center;
+}
+
+.ba-qr-code {
+    position: relative;
+
+    &:before {
+        content: 'Оплата в один клік';
+        font-size: 16px;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        top: -10%;
+        min-width: 200px;
+    }
+
+    &:after {
+        content: 'Використайте додаток';
+        display: inline-block;
+        font-size: 16px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -10%;
+        min-width: 200px;
+    }
+}
+
+.ba-qr-code-container {
+    display: none;
+
+    @media(min-width: 1024px) {
+        display: flex;
+        align-items: center;
+        padding: 64px 77px 78px 102px;
+        margin-top: 30px;
+        width: 100%;
+        background: rgba(196, 196, 196, .2);
+    }
+}
+
+#card-number {
+    font-size: 20px;
+    background: transparent;
+    border-bottom: 1px solid $main-color;
+}
+
+.ba-button-bottom-payment {
+    width: 261px;
+    height: 48px;
+    background: $interactive-color;
+    text-align: center;
+    line-height: 48px;
 }

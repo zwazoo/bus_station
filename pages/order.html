@@ -129,19 +129,21 @@
                     <form class="ba-submit-form" action="#">
                         <div class="ba-passenger-info main-passenger">
                             <p class="ba-subtitle">Пасажир 1</p>
-                            <input class="submit-form-input" type="text" name="pass-name-main" id="pass-name"
-                                placeholder="Ім'я">
-                            <input class="submit-form-input" type="text" name="pass-surname-main" id="pass-surname"
-                                placeholder="Прізвище">
-                            <input class="submit-form-input" type="text" name="pass-phone" id="pass-phone" placeholder="Телефон">
-                            <input class="submit-form-input" type="text" name="pass-email" id="pass-email" placeholder="Email">
+                            <input class="submit-form-input ba-col-small-12 ba-col-large-3" type="text" name="pass-name-main"
+                                id="pass-name" placeholder="Ім'я">
+                            <input class="submit-form-input ba-col-small-12 ba-col-large-3" type="text" name="pass-surname-main"
+                                id="pass-surname" placeholder="Прізвище">
+                            <input class="submit-form-input ba-col-small-12 ba-col-large-3" type="text" name="pass-phone"
+                                id="pass-phone" placeholder="Телефон">
+                            <input class="submit-form-input ba-col-small-12 ba-col-large-3" type="text" name="pass-email"
+                                id="pass-email" placeholder="Email">
                         </div>
                         <div class="ba-passenger-info">
                             <p class="ba-subtitle">Пасажир 2</p>
-                            <input class="submit-form-input" type="text" name="pass-name-2" id="pass-name-2"
-                                placeholder="Ім'я">
-                            <input class="submit-form-input" type="text" name="pass-surname-2" id="pass-surname-2"
-                                placeholder="Прізвище">
+                            <input class="submit-form-input ba-col-small-12 ba-col-large-3" type="text" name="pass-name-2"
+                                id="pass-name-2" placeholder="Ім'я">
+                            <input class="submit-form-input ba-col-small-12 ba-col-large-3" type="text" name="pass-surname-2"
+                                id="pass-surname-2" placeholder="Прізвище">
                         </div>
                         <div class="ba-submit-agreement">
                             <input class="submit-form-input" type="checkbox" id="agreement" name="agreement" checked>
@@ -155,58 +157,78 @@
                         <p class="ba-subtitle">
                             До сплати: за <span data-ticket-qty>2 </span><span data-ticket-declension>квитка</span>
                         </p>
-
-                        <button class="ba-button ba-button-summary-submit" data-summary-submit>
-                            Сума <span class="summary-text">300грн</span>
-                        </button>
-
-                        <div class="ba-payment-method">
-                            <div class="ba-payment-method-variants">
-                                <div class="payment-option">
-                                    <svg width="23" height="22" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <use xlink:href="#credit-card-icon" />
-                                    </svg>
-                                    <span class="payment-method-name">Картка</span>
-                                </div>
-                                <div class="payment-option">
-                                    <svg width="21" height="22" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <use xlink:href="#privat24-icon" />
-                                    </svg>
-                                    <span class="payment-method-name">Приват24</span>
-                                </div>
-                                <div class="payment-option">
-                                    <svg width="23" height="22" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <use xlink:href="#liqpay-icon" />
-                                    </svg>
-                                    <span class="payment-method-name">Liqpay </span>
-                                </div>
-                                <div class="payment-option">
-                                    <svg width="22" height="22" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <use xlink:href="#masterpass-icon" />
-                                    </svg>
-                                    <span class="payment-method-name">Masterpass</span>
+                        <div class="ba-row">
+                            <div class="ba-col-large-5">
+                                <button class="ba-button ba-button-summary-submit" data-summary-submit>
+                                    Сума <span class="summary-text">300грн</span>
+                                </button>
+                                <div class="ba-qr-code-container">
+                                    <div class="ba-qr-code">
+                                        <img src="../img/qr-code.jpg" alt="qr-code">
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="ba-row">
-                                <div class="card-number-row ba-col-small-12">
-                                    <p>Номер карти</p>
-                                    <input type="text" name="card-number" id="card-number" placeholder="XXXX XXXX XXXX XXXX">
-                                </div>
-                                <div class="card-validity ba-col-small-6">
-                                    <p>Термін дії</p>
-                                    <input type="date" name="validity" id="validity">
-                                </div>
-                                <div class="cvv-info ba-col-small-6">
-                                    <p>CVV2</p>
-                                    <input type="number" name="cvv" id="cvv" placeholder="XXXX">
-                                </div>
-                            </div>
 
+                            <div class="ba-col-large-7">
+
+                                <div class="ba-payment-method">
+                                    <div class="ba-payment-method-variants">
+                                        <div class="payment-option">
+                                            <svg width="23" height="22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <use xlink:href="#credit-card-icon" />
+                                            </svg>
+                                            <span class="payment-method-name">Картка</span>
+                                        </div>
+                                        <div class="payment-option">
+                                            <svg width="21" height="22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <use xlink:href="#privat24-icon" />
+                                            </svg>
+                                            <span class="payment-method-name">Приват24</span>
+                                        </div>
+                                        <div class="payment-option">
+                                            <svg width="23" height="22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <use xlink:href="#liqpay-icon" />
+                                            </svg>
+                                            <span class="payment-method-name">Liqpay </span>
+                                        </div>
+                                        <div class="payment-option">
+                                            <svg width="22" height="22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <use xlink:href="#masterpass-icon" />
+                                            </svg>
+                                            <span class="payment-method-name">Masterpass</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="ba-row">
+                                        <div class="card-number-row ba-col-small-12">
+                                            <p>Номер карти</p>
+                                            <input type="text" name="card-number" id="card-number" placeholder="XXXX XXXX XXXX XXXX">
+                                        </div>
+                                        <div class="card-validity ba-col-small-6">
+                                            <p>Термін дії</p>
+                                            <input type="date" name="validity" id="validity">
+                                        </div>
+                                        <div class="cvv-info ba-col-small-6">
+                                            <p>CVV2</p>
+                                            <input type="number" name="cvv" id="cvv" placeholder="XXXX">
+                                        </div>
+                                    </div>
+                                    <div class="ba-payment-button-bottom">
+                                        <div class="ba-button-bottom-payment">Оплатити</div>
+                                        <svg width="32" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <use xlink:href="#lock" />
+                                        </svg>
+                                    </div>
+
+                                </div>
+
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -219,7 +241,8 @@
 
     </main>
 
-    <footer class="ba-footer">
+    <footer class="
+                                                ba-footer">
         <div class="ba-container">
             <div class="ba-row">
                 <div class="ba-col-large-3 ba-col-small-6 ba-footer__contacts">
@@ -269,7 +292,7 @@
         <!-- /.ba-container -->
     </footer>
 
-    <svg class="ba-hide">
+    <symbol class="ba-hide">
         <defs>
             <symbol id="logo" viewBox="0 0 225 51">
                 <path d="M112.447 51H34.6963C30.2534 51 27.8204 45.931 30.465 42.4138L55.0066 10.5517C60.1899 3.93103 68.0178 0 76.3747 0H157.722C161.741 0 163.963 4.65517 161.424 7.75862L134.555 40.4483C129.16 47.1724 121.015 51 112.447 51Z"
@@ -345,17 +368,21 @@
                 <path d="M20.6828 6.82785C20.6828 10.3068 17.7614 13.1554 14.1219 13.1554C10.4825 13.1554 7.56104 10.3068 7.56104 6.82785C7.56104 3.34892 10.4825 0.500259 14.1219 0.500259C17.7614 0.500259 20.6828 3.34892 20.6828 6.82785Z"
                     stroke="#193341" stroke-opacity="0.7" />
             </symbol>
+            <symbol id="lock" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27.6364 14.8985V10.7407C27.6364 4.81852 22.416 0 16 0C9.584 0 4.36364 4.81852 4.36364 10.7407V14.8985C1.89018 15.3326 0 17.5281 0 20.1704V34.6459C0 37.5978 2.35855 40 5.25745 40H26.7425C29.6415 40 32 37.5978 32 34.6452V20.1696C32 17.5281 30.1098 15.3326 27.6364 14.8985ZM5.81818 10.7407C5.81818 5.63481 10.3855 1.48148 16 1.48148C21.6145 1.48148 26.1818 5.63481 26.1818 10.7407V14.8148H5.81818V10.7407ZM18.9091 28.1481C18.9091 29.7822 17.6044 31.1111 16 31.1111C14.3956 31.1111 13.0909 29.7822 13.0909 28.1481V23.7037C13.0909 22.0696 14.3956 20.7407 16 20.7407C17.6044 20.7407 18.9091 22.0696 18.9091 23.7037V28.1481Z"
+                    fill="#193341" fill-opacity="0.8" />
+            </symbol>
 
         </defs>
-    </svg>
+        </svg>
 
-    <script src="../js/jquery-3.3.1.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyOvsVnebwne6aowDFxMDFQv9J8djRLCE&libraries=places&language=uk">
-    </script>
-    <script src="../js/slick.min.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/jquery-ui.js"></script>
-    <script src="../js/i18n/datepicker-uk.js"></script>
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyOvsVnebwne6aowDFxMDFQv9J8djRLCE&libraries=places&language=uk">
+        </script>
+        <script src="../js/slick.min.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/jquery-ui.js"></script>
+        <script src="../js/i18n/datepicker-uk.js"></script>
 </body>
 
 </html>

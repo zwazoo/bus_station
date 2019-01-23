@@ -228,16 +228,30 @@ body {
 
 }
 
+#from-field,
+#to-field,
+#datepicker,
+.seat-selection {
+    padding-left: 10%;
+    width: 100%;
+
+    &::placeholder {
+        padding-left: 5%;
+
+    }
+}
+
+
+
 .ba-button,
 input[type="text"],
 input[type="date"],
 .seat-selection {
     height: 52px;
-    width: 100%;
-    padding-left: 10%;
 
+    //width: 100%;
     &::placeholder {
-        padding-left: 10%;
+        padding-left: 5%;
     }
 }
 
