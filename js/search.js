@@ -4,6 +4,7 @@
 (function () {
     "use strict";
 
+
     const xhr = new XMLHttpRequest();
 
     const ticketsList = document.querySelector('.ba-tickets'),
@@ -19,19 +20,25 @@
     xhr.send();
 
     xhr.onload = function () {
+
         let ajax = this;
         const data = JSON.parse(ajax.response);
+        if (sessionStorage.getItem("cityTo")) { ///run function getData() when page loads if we already have destination
+            getData();
+        }
 
 
         document.querySelector(".ba-button-search").onclick = getData;
 
         function getData() {
+
             let ticketsListHTML = "";
             let dateHTML = "";
             let cityHTML = "";
 
-            let date = document.getElementById('datepicker').value;
-            let city = document.querySelector('.input-city').value;
+            let date = sessionStorage.getItem("date"); ////getting date and city from sessionStorage, sessionStorage values update after each input change
+            let city = sessionStorage.getItem("cityTo");
+
 
             data.forEach(function (cities) {
                 if (cities.city == city) {
