@@ -47,6 +47,7 @@ $(document).ready(function () {
 		$(".ba-breadcrumbs__optional").css('display', 'none');
 		$("#without-details").css('color', '#00D2D2');
 	});
+});
 
 //Animation on error page
 $(document).ready(function () {
