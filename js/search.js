@@ -43,6 +43,7 @@
             data.forEach(function (cities) {
                 if (cities.city == city) {
 
+
                     ticketsListHTML += ticketsTmpl
                         .replace(/{{city}}/ig, cities.city)
                         .replace(/{{trip}}/ig, cities.trip)
