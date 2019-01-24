@@ -22,21 +22,6 @@ $(function () {
 
 //Additional information of ticket
 $(document).ready(function () {
-  $('[data-action="addMore"]').click(function () {
-    if ($('[data-action="addMore"]').hasClass("open")) {
-      $(this).removeClass("open");
-      $(".ba-ticket__additional").css("display", "none");
-      $("#hide-details").css("display", "none");
-      $(".ba-breadcrumbs__optional").css("display", "none");
-      $("#without-details").css("color", "#00D2D2");
-    } else {
-      $(this).addClass("open");
-      $(".ba-ticket__additional").css("display", "block");
-      $(".ba-breadcrumbs__optional").css("display", "flex");
-      $("#without-details").css("color", "#193341");
-    }
-  });
-
 
   $('[data-action="addMore"]').click(function () {
 
