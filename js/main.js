@@ -22,28 +22,55 @@ $(function () {
 
 //Additional information of ticket
 $(document).ready(function () {
+
   $('[data-action="addMore"]').click(function () {
-    if ($('[data-action="addMore"]').hasClass("open")) {
-      $(this).removeClass("open");
-      $(".ba-ticket__additional").css("display", "none");
-      $("#hide-details").css("display", "none");
-      $(".ba-breadcrumbs__optional").css("display", "none");
-      $("#without-details").css("color", "#00D2D2");
+
+    let y = $(this).attr('data-id');
+
+    if ($('[data-action="addMore"]').hasClass('open')) {
+      $(this).removeClass('open');
+      $('#' + y).css('display', 'none');
+      $("#hide-details").css('display', 'none');
+      $(".ba-breadcrumbs__optional").css('display', 'none');
+      $("#without-details").css('color', '#00D2D2');
+
     } else {
       $(this).addClass("open");
-      $(".ba-ticket__additional").css("display", "block");
+      $('#' + y).css("display", "block");
       $(".ba-breadcrumbs__optional").css("display", "flex");
       $("#without-details").css("color", "#193341");
     }
   });
 
-  $("#schedule").click(function () {
-    $('[data-action="addMore"]').removeClass("open");
-    $(".ba-ticket__additional").css("display", "none");
-    $(".ba-breadcrumbs__optional").css("display", "none");
-    $("#without-details").css("color", "#00D2D2");
+  $('#schedule').click(function () {
+    $('[data-action="addMore"]').removeClass('open');
+    $(".ba-ticket__additional").css('display', 'none');
+    $(".ba-breadcrumbs__optional").css('display', 'none');
+    $("#without-details").css('color', '#00D2D2');
   });
 });
+
+//Sorting
+let filters = $(".ba-tickets-info__select");
+let option = filters.value;
+let price = $('.ba-ticket__cost').map(function () {
+  return $(this).html();
+}).get();
+console.log(price);
+
+// let x = $('.ba-ticket__add-details[data-id]').map(function() {
+//   return this.dataset.id;
+// }).get();
+
+filters.onchange = function () {
+  let selectDate = [];
+  let selectTime1 = [];
+  let selectTime2 = [];
+
+  if (option == "by price") {
+    selectDate.push("price");
+  };
+}
 
 //Animation on error page
 $(document).ready(function () {
