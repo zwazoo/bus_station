@@ -43,6 +43,7 @@
             data.forEach(function (cities) {
                 if (cities.city == city) {
 
+
                     ticketsListHTML += ticketsTmpl
                         .replace(/{{city}}/ig, cities.city)
                         .replace(/{{trip}}/ig, cities.trip)
@@ -79,13 +80,13 @@
             let option = filters.value;
             let price = document.querySelector('[data-cost="price"]').innerHTML;
             console.log(price);
-            
-            filters.onchange = function() {
+
+            filters.onchange = function () {
                 let selectDate = [];
                 let selectTime1 = [];
                 let selectTime2 = [];
 
-                if(option == "by price"){
+                if (option == "by price") {
                     selectDate.push("price");
                 };
             }
