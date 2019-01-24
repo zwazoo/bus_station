@@ -112,10 +112,10 @@
                             <div class="ba-qty-row">
                                 <label class="passenger-qty-label" for="qty">К-сть пасажирів:</label>
                                 <span class="ba-input-qty">
-                                    <button class="ticket-operation" data-up>+</button>
+                                    <button class="ticket-operation" data-operation='+'>+</button>
                                     <input class="ticket-qty" data-ticket-qty type="number" id="qty" name="qty" value="100"
                                         min="0" max="100">
-                                    <button class="ticket-operation" data-down>-</button>
+                                    <button class="ticket-operation" data-operation='-'>-</button>
                                 </span>
                             </div>
                             <p class="ba-notification clarification">Перевізник не надає вибір місця</p>
@@ -211,11 +211,11 @@
                                         </div>
                                         <div class="card-validity ba-col-small-6">
                                             <p>Термін дії</p>
-                                            <input type="date" name="validity" id="validity">
+                                            <input type="text" name="validity" id="validity" placeholder="MM/YY">
                                         </div>
                                         <div class="cvv-info ba-col-small-6">
                                             <p>CVV2</p>
-                                            <input type="number" name="cvv" id="cvv" placeholder="XXXX">
+                                            <input type="text" name="cvv" id="cvv" placeholder="XXXX">
                                         </div>
                                     </div>
                                     <div class="ba-payment-button-bottom">
@@ -292,7 +292,7 @@
         <!-- /.ba-container -->
     </footer>
 
-    <symbol class="ba-hide">
+    <svg class="ba-hide">
         <defs>
             <symbol id="logo" viewBox="0 0 225 51">
                 <path d="M112.447 51H34.6963C30.2534 51 27.8204 45.931 30.465 42.4138L55.0066 10.5517C60.1899 3.93103 68.0178 0 76.3747 0H157.722C161.741 0 163.963 4.65517 161.424 7.75862L134.555 40.4483C129.16 47.1724 121.015 51 112.447 51Z"
@@ -374,15 +374,16 @@
             </symbol>
 
         </defs>
-        </svg>
+    </svg>
 
-        <script src="../js/jquery-3.3.1.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyOvsVnebwne6aowDFxMDFQv9J8djRLCE&libraries=places&language=uk">
-        </script>
-        <script src="../js/slick.min.js"></script>
-        <script src="../js/main.js"></script>
-        <script src="../js/jquery-ui.js"></script>
-        <script src="../js/i18n/datepicker-uk.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyOvsVnebwne6aowDFxMDFQv9J8djRLCE&libraries=places&language=uk">
+    </script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/order-details.js"></script>
+    <script src="../js/i18n/datepicker-uk.js"></script>
 </body>
 
 </html>

@@ -1539,7 +1539,7 @@ input[type="number"]::-webkit-inner-spin-button {
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
-    top: -10%;
+    top: -7%;
     min-width: 200px; }
   .ba-qr-code:after {
     content: 'Використайте додаток';
@@ -1550,7 +1550,7 @@ input[type="number"]::-webkit-inner-spin-button {
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
-    bottom: -10%;
+    bottom: -7%;
     min-width: 200px; }
 
 .ba-qr-code-container {
@@ -1563,7 +1563,7 @@ input[type="number"]::-webkit-inner-spin-button {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      padding: 64px 77px 78px 102px;
+      padding: 31px 77px 26px 102px;
       margin-top: 30px;
       width: 100%;
       background: rgba(196, 196, 196, 0.2); } }
@@ -1573,12 +1573,28 @@ input[type="number"]::-webkit-inner-spin-button {
   background: transparent;
   border-bottom: 1px solid #2C5A71; }
 
-.ba-button-bottom-payment {
-  width: 261px;
-  height: 48px;
-  background: #00D2D2;
-  text-align: center;
-  line-height: 48px; }
+@media (min-width: 1024px) {
+  .ba-payment-button-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-bottom: 132px;
+    padding-top: 64px; } }
+
+.ba-payment-button-bottom .ba-button-bottom-payment {
+  cursor: pointer; }
+  .ba-payment-button-bottom .ba-button-bottom-payment:hover {
+    background: #00bfbf; }
+  @media (min-width: 1024px) {
+    .ba-payment-button-bottom .ba-button-bottom-payment {
+      width: 261px;
+      height: 48px;
+      background: #00D2D2;
+      text-align: center;
+      line-height: 48px; } }
 
 .ba-error {
   text-align: center; }

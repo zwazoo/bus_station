@@ -17,36 +17,32 @@ $(function () {
   $("#datepicker").datepicker($.datepicker.regional["uk"]);
   $("#locale").on("change", function () {
     $("#datepicker").datepicker("option", $.datepicker.regional[$(this).val()]);
-
   });
 });
 
 //Additional information of ticket
 $(document).ready(function () {
+  $('[data-action="addMore"]').click(function () {
+    if ($('[data-action="addMore"]').hasClass("open")) {
+      $(this).removeClass("open");
+      $(".ba-ticket__additional").css("display", "none");
+      $("#hide-details").css("display", "none");
+      $(".ba-breadcrumbs__optional").css("display", "none");
+      $("#without-details").css("color", "#00D2D2");
+    } else {
+      $(this).addClass("open");
+      $(".ba-ticket__additional").css("display", "block");
+      $(".ba-breadcrumbs__optional").css("display", "flex");
+      $("#without-details").css("color", "#193341");
+    }
+  });
 
-	$('[data-action="addMore"]').click(function () {
-
-		if ($('[data-action="addMore"]').hasClass('open')) {
-			$(this).removeClass('open');
-			$(".ba-ticket__additional").css('display', 'none');
-			$("#hide-details").css('display', 'none');
-			$(".ba-breadcrumbs__optional").css('display', 'none');
-			$("#without-details").css('color', '#00D2D2');
-
-		} else {
-			$(this).addClass("open");
-			$(".ba-ticket__additional").css("display", "block");
-			$(".ba-breadcrumbs__optional").css("display", "flex");
-			$("#without-details").css("color", "#193341");
-		}
-	});
-
-	$('#schedule').click(function () {
-		$('[data-action="addMore"]').removeClass('open');
-		$(".ba-ticket__additional").css('display', 'none');
-		$(".ba-breadcrumbs__optional").css('display', 'none');
-		$("#without-details").css('color', '#00D2D2');
-	});
+  $("#schedule").click(function () {
+    $('[data-action="addMore"]').removeClass("open");
+    $(".ba-ticket__additional").css("display", "none");
+    $(".ba-breadcrumbs__optional").css("display", "none");
+    $("#without-details").css("color", "#00D2D2");
+  });
 });
 
 //Animation on error page
@@ -82,17 +78,12 @@ var options = {
 autocompleteFrom = new google.maps.places.Autocomplete(inputFrom, options);
 autocompleteTo = new google.maps.places.Autocomplete(inputTo, options);
 
-
-
 $(".seat-selection").on("change", function () {
   sessionStorage.setItem("seatQty", $(this).val());
 });
 
-
 autocompleteFrom.addListener("place_changed", changeToShortAddressAjax);
 autocompleteTo.addListener("place_changed", changeToShortAddressAjax);
-
-
 
 var cityFromShortName;
 var cityToShortName;
@@ -157,33 +148,30 @@ $(document).ready(function () {
 
 // index-slider
 
-;(function ($) {
+(function ($) {
   "use strict";
 
-  const bestSlider = $('.ba-index-slider');
+  const bestSlider = $(".ba-index-slider");
 
   bestSlider.slick({
-
     slidesToShow: 2,
     slidesToScroll: 2,
     infinite: false,
     adaptiveHeight: true,
     fade: false,
     // slide: '.ba-index-slider__img',
-    prevArrow: '.ba-index-slider-prev',
-    nextArrow: '.ba-index-slider-next',
+    prevArrow: ".ba-index-slider-prev",
+    nextArrow: ".ba-index-slider-next",
     dots: true,
-    responsive: [
-      {
-        breakpoint: 1023,
-        settings:{
-          rows: 2,
-          slidesPerRow: 2,
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
+    responsive: [{
+      breakpoint: 1023,
+      settings: {
+        rows: 2,
+        slidesPerRow: 2,
+        slidesToShow: 1,
+        slidesToScroll: 1
       }
-    ]
+    }]
   });
- 
+
 })(jQuery);

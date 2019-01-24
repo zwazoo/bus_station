@@ -535,7 +535,7 @@ input[type="number"]::-webkit-inner-spin-button {
         -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         transform: translateX(-50%);
-        top: -10%;
+        top: -7%;
         min-width: 200px;
     }
 
@@ -546,7 +546,7 @@ input[type="number"]::-webkit-inner-spin-button {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: -10%;
+        bottom: -7%;
         min-width: 200px;
     }
 }
@@ -557,7 +557,7 @@ input[type="number"]::-webkit-inner-spin-button {
     @media(min-width: 1024px) {
         display: flex;
         align-items: center;
-        padding: 64px 77px 78px 102px;
+        padding: 31px 77px 26px 102px;
         margin-top: 30px;
         width: 100%;
         background: rgba(196, 196, 196, .2);
@@ -570,10 +570,32 @@ input[type="number"]::-webkit-inner-spin-button {
     border-bottom: 1px solid $main-color;
 }
 
-.ba-button-bottom-payment {
-    width: 261px;
-    height: 48px;
-    background: $interactive-color;
-    text-align: center;
-    line-height: 48px;
+.ba-payment-button-bottom {
+
+    @media(min-width: 1024px) {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 132px;
+        padding-top: 64px;
+
+    }
+
+    .ba-button-bottom-payment {
+        cursor: pointer;
+
+        &:hover {
+            background: $interactive-color-hover;
+        }
+
+        @media(min-width: 1024px) {
+            width: 261px;
+            height: 48px;
+            background: $interactive-color;
+            text-align: center;
+            line-height: 48px;
+        }
+    }
+
 }
+
+#validity {}
