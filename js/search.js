@@ -74,25 +74,7 @@
             ticketsList.innerHTML = ticketsListHTML;
             dateTicket.innerHTML = dateHTML;
             toCity.innerHTML = cityHTML;
-                       
-            
 
-                
-            //Sorting
-            let filters = document.querySelector(".ba-tickets-info__select");
-            let option = filters.value;
-            let price = document.querySelectorAll('[data-cost="price"]').innerHTML;
-            console.log(price);
-
-            filters.onchange = function () {
-                let selectDate = [];
-                let selectTime1 = [];
-                let selectTime2 = [];
-
-                if (option == "by price") {
-                    selectDate.push("price");
-                };
-            }
         }
     };
 

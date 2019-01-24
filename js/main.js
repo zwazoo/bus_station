@@ -51,6 +51,28 @@ $(document).ready(function () {
 	});
 });
 
+//Sorting
+let filters = $(".ba-tickets-info__select");
+let option = filters.value;
+let price = $('.ba-ticket__cost').map(function() {
+  return $(this).html();
+}).get();
+console.log(price);
+
+// let x = $('.ba-ticket__add-details[data-id]').map(function() {
+//   return this.dataset.id;
+// }).get();
+
+filters.onchange = function () {
+  let selectDate = [];
+  let selectTime1 = [];
+  let selectTime2 = [];
+
+  if (option == "by price") {
+    selectDate.push("price");
+  };
+}
+
 //Animation on error page
 $(document).ready(function () {
   $(".ba-error-img__animation").css("transform", "rotate(0deg)");
