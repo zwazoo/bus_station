@@ -23,7 +23,7 @@ $(function () {
 //Additional information of ticket
 $(document).ready(function () {
 
-  $('[data-action="addMore"]').click(function () {
+  $('.ba-ticket').on('click', '[data-action="addMore"]', function () {
 
     let y = $(this).attr('data-id');
 
