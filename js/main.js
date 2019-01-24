@@ -26,16 +26,18 @@ $(document).ready(function () {
 
 	$('[data-action="addMore"]').click(function () {
 
+    let y = $(this).attr('data-id');
+
 		if ($('[data-action="addMore"]').hasClass('open')) {
 			$(this).removeClass('open');
-			$(".ba-ticket__additional").css('display', 'none');
+			$('#' + y).css('display', 'none');
 			$("#hide-details").css('display', 'none');
 			$(".ba-breadcrumbs__optional").css('display', 'none');
-			$("#without-details").css('color', '#00D2D2');
+      $("#without-details").css('color', '#00D2D2');
 
 		} else {
 			$(this).addClass("open");
-			$(".ba-ticket__additional").css("display", "block");
+			$('#' + y).css("display", "block");
 			$(".ba-breadcrumbs__optional").css("display", "flex");
 			$("#without-details").css("color", "#193341");
 		}
