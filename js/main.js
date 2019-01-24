@@ -180,12 +180,14 @@ $(document).ready(function () {
         breakpoint: 1023,
         settings:{
           rows: 2,
-          slidesPerRow: 2,
+          slidesPerRow: 1,
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          dots: false
+
         }
       }
     ]
   });
- 
+
 })(jQuery);
