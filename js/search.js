@@ -58,27 +58,31 @@
                         .replace(/{{city2}}/ig, cities.city2)
                         .replace(/{{city3}}/ig, cities.city3)
                         .replace(/{{date}}/ig, date)
+            
                 }
-            });
 
+            });
+            
             //change date on top,after breadcrumbs
             dateHTML += dateTmpl
-                .replace(/{{date0}}/ig, date)
-
+            .replace(/{{date0}}/ig, date)
+            
             //change city on top,after breadcrumbs
             cityHTML += cityTmpl
-                .replace(/{{toCity}}/ig, city)
-
+            .replace(/{{toCity}}/ig, city)
+            
             //added changes in html
             ticketsList.innerHTML = ticketsListHTML;
             dateTicket.innerHTML = dateHTML;
             toCity.innerHTML = cityHTML;
+                       
+            
 
-
+                
             //Sorting
             let filters = document.querySelector(".ba-tickets-info__select");
             let option = filters.value;
-            let price = document.querySelector('[data-cost="price"]').innerHTML;
+            let price = document.querySelectorAll('[data-cost="price"]').innerHTML;
             console.log(price);
 
             filters.onchange = function () {

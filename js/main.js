@@ -37,11 +37,31 @@ $(document).ready(function () {
     }
   });
 
-  $("#schedule").click(function () {
-    $('[data-action="addMore"]').removeClass("open");
-    $(".ba-ticket__additional").css("display", "none");
-    $(".ba-breadcrumbs__optional").css("display", "none");
-    $("#without-details").css("color", "#00D2D2");
+
+  $('[data-action="addMore"]').click(function () {
+
+    let y = $(this).attr('data-id');
+
+    if ($('[data-action="addMore"]').hasClass('open')) {
+      $(this).removeClass('open');
+      $('#' + y).css('display', 'none');
+      $("#hide-details").css('display', 'none');
+      $(".ba-breadcrumbs__optional").css('display', 'none');
+      $("#without-details").css('color', '#00D2D2');
+
+    } else {
+      $(this).addClass("open");
+      $('#' + y).css("display", "block");
+      $(".ba-breadcrumbs__optional").css("display", "flex");
+      $("#without-details").css("color", "#193341");
+    }
+  });
+
+  $('#schedule').click(function () {
+    $('[data-action="addMore"]').removeClass('open');
+    $(".ba-ticket__additional").css('display', 'none');
+    $(".ba-breadcrumbs__optional").css('display', 'none');
+    $("#without-details").css('color', '#00D2D2');
   });
 });
 
@@ -167,11 +187,12 @@ $(document).ready(function () {
       breakpoint: 1023,
       settings: {
         rows: 2,
-        slidesPerRow: 2,
+        slidesPerRow: 1,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        dots: false
+
       }
     }]
   });
-
 })(jQuery);

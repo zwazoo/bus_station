@@ -183,7 +183,7 @@
                                         <span>{{city}}</span>
                                     </div>
                                     <p class="ba-ticket__passage">Рейс <span>{{trip}}</span></p>
-                                    <a href="#" data-action="addMore">деталі</a>
+                                    <a href="#trip-{{trip}}" data-action="addMore" data-id="trip-{{trip}}">деталі</a>
                                 </div>
                                 <!-- /.ba-col-large-3 -->
         
@@ -226,11 +226,11 @@
                                 </div>
                                 <!-- /.ba-col-large-3 -->
         
-                                <a data-action="addMore" class="ba-ticket__add-details ba-col-small-12" href="#">деталі</a>
+                                <a data-action="addMore" data-id="trip-{{trip}}" class="ba-ticket__add-details ba-col-small-12" href="#trip-{{trip}}">деталі</a>
                             </div>
                             <!-- /.ba-row -->
         
-                            <div class="ba-ticket__additional">
+                            <div class="ba-ticket__additional" id="trip-{{trip}}">
                                 <div class="ba-row ba-ticket__dest-line">
                                     <div class="ba-col-3">
                                         <p class="ba-ticket__dest-line-time ba-ticket__dest-line-time--main">{{departuretime}}</p>

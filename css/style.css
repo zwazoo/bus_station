@@ -1596,6 +1596,19 @@ input[type="number"]::-webkit-inner-spin-button {
       text-align: center;
       line-height: 48px; } }
 
+.ba-destinations-section ul {
+  padding-left: 70px; }
+
+@media screen and (max-width: 1023px) {
+  .ba-destinations-section ul {
+    padding-left: 0;
+    margin: 0; }
+  .ba-destinations-section h2 {
+    padding-bottom: 12px; }
+  .ba-destinations-section h4 {
+    text-align: center;
+    padding-bottom: 14px; } }
+
 .ba-error {
   text-align: center; }
   .ba-error p {
@@ -2119,15 +2132,16 @@ input[type="date"],
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; }
-      .popular-trips__resp .popular-trips__line {
-        position: relative; }
-        .popular-trips__resp .popular-trips__line li::after {
-          content: "";
-          border-left: 2px solid #00D2D2;
-          height: 270px;
-          position: absolute;
-          left: 30px;
-          top: 93px; }
+      .popular-trips__resp .ba-left-small-line::before {
+        content: "";
+        border-left: 2px solid #00D2D2;
+        height: 20px;
+        display: block; }
+      .popular-trips__resp .ba-left-small-line::after {
+        content: "";
+        border-left: 2px solid #00D2D2;
+        height: 20px;
+        display: block; }
       .popular-trips__resp li {
         font-size: 12px; }
       .popular-trips__resp .popular-trips__price li + li {
@@ -2140,7 +2154,7 @@ input[type="date"],
         left: 43px; }
       .popular-trips__resp .otstup-30 {
         padding-left: 0;
-        padding-top: 109px; } }
+        padding-top: 128px; } }
 
 .popular-trips__more {
   font-size: 14px;
@@ -2174,10 +2188,51 @@ input[type="date"],
         -ms-flex-direction: column;
         flex-direction: column; } }
 
+.slick-slide {
+  outline: none; }
+
+.index-slider {
+  position: relative; }
+  .index-slider .ba-index-slider-next {
+    right: 0; }
+  .index-slider .ba-index-slider-button {
+    z-index: 99;
+    position: absolute;
+    top: 145px;
+    background: transparent;
+    border: none;
+    outline: none; }
+    .index-slider .ba-index-slider-button svg {
+      fill: #2C5A71; }
+      .index-slider .ba-index-slider-button svg:hover {
+        fill: #00bfbf; }
+    .index-slider .ba-index-slider-button .ba-index-slider-next {
+      position: absolute; }
+    @media screen and (max-width: 1023px) {
+      .index-slider .ba-index-slider-button svg {
+        display: none; } }
+
 .ba-index-slider {
   background-color: #EDEDED;
   padding-top: 69px;
-  padding-bottom: 16px; }
+  padding-bottom: 16px;
+  color: #193341;
+  z-index: 1; }
+  .ba-index-slider h5 {
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    padding-bottom: 17px; }
+  .ba-index-slider p {
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 0.055em;
+    padding-bottom: 33px; }
+  .ba-index-slider a {
+    font-weight: 200;
+    font-size: 14px;
+    letter-spacing: 0.05em; }
+    .ba-index-slider a:hover {
+      border-bottom: 1px solid #193341; }
   .ba-index-slider ul {
     text-align: center;
     padding-right: 94px;
@@ -2192,7 +2247,7 @@ input[type="date"],
     border-radius: 50%;
     background-color: transparent;
     color: transparent;
-    padding: 0px;
+    padding: 0;
     margin-left: 23px;
     width: 15px;
     height: 15px;
@@ -2208,36 +2263,51 @@ input[type="date"],
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    .ba-index-slider__img article img {
-      width: auto;
-      height: 100%; }
+    .ba-index-slider__img article .ba-index-slider__text-mini {
+      display: none; }
   .ba-index-slider__img .ba-article-1 {
     padding-left: 99px; }
-  .ba-index-slider__img .ba-article-2 img {
+  .ba-index-slider__img .ba-article-2 {
     padding-left: 23px; }
   @media screen and (max-width: 1124px) {
     .ba-index-slider__img .ba-article-1 {
-      padding-left: 15px; } }
+      padding-left: 32px; }
+    .ba-index-slider__img .ba-article-2 img {
+      height: 100%; } }
+  @media screen and (max-width: 1023px) {
+    .ba-index-slider__img article {
+      margin-left: 21px;
+      margin-right: 21px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .ba-index-slider__img article p {
+        padding-top: 15px;
+        padding-bottom: 23px; }
+      .ba-index-slider__img article img {
+        width: 100%;
+        height: auto; }
+      .ba-index-slider__img article .ba-index-slider__text-mini {
+        display: inline;
+        outline: none; }
+      .ba-index-slider__img article .ba-index-slider__text {
+        display: none; }
+      .ba-index-slider__img article .ba-index-slider__text-mini-bottom-line a:after {
+        content: "";
+        border-bottom: 2px solid #000;
+        display: block;
+        margin: auto;
+        width: 81%;
+        padding-top: 30px; } }
 
 .ba-index-slider__text {
   padding-left: 48px;
   padding-top: 14px;
-  color: #193341; }
-  .ba-index-slider__text h5 {
-    font-size: 18px;
-    letter-spacing: 0.04em;
-    padding-bottom: 17px; }
-  .ba-index-slider__text p {
-    font-weight: 300;
-    font-size: 16px;
-    letter-spacing: 0.055em;
-    padding-bottom: 33px; }
-  .ba-index-slider__text a {
-    font-weight: 200;
-    font-size: 14px;
-    letter-spacing: 0.05em; }
-    .ba-index-slider__text a:hover {
-      border-bottom: 1px solid #193341; }
+  padding-right: 30px; }
 
 .ba-app {
   padding-top: 68px;
@@ -2284,9 +2354,6 @@ input[type="date"],
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; }
-    .ba-app img {
-      height: 100%;
-      width: 100%; }
     .ba-app .ba-app__text {
       display: none; }
     .ba-app .ba-app__googfon {
@@ -2294,7 +2361,10 @@ input[type="date"],
       .ba-app .ba-app__googfon a {
         margin: 0 auto; }
       .ba-app .ba-app__googfon a + a {
-        margin-left: 20px; } }
+        margin-left: 20px; }
+    .ba-app img {
+      height: 100%;
+      width: 100%; } }
 
 .ba-footer {
   color: #F0F5F7;
