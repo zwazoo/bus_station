@@ -76,9 +76,6 @@
 
         }
     };
-
-})();
-$(document).ready(function () {
     var tickets = document.querySelectorAll('.ba-ticket');
     tickets.forEach(function name(ticket) {
         $(ticket).on('click', function (e) {
@@ -95,4 +92,5 @@ $(document).ready(function () {
         })
 
     })
-});
+
+})();
