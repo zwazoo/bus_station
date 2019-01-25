@@ -12,6 +12,12 @@ $("#datepicker").click(function () {
     sessionStorage.setItem("date", $(this).val());
   });
 });
+var dateToday = new Date();
+$(function () {
+  $("#datepicker").datepicker({
+    minDate: dateToday
+  });
+});
 
 $(function () {
   $("#datepicker").datepicker($.datepicker.regional["uk"]);
