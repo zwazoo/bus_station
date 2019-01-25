@@ -26,8 +26,6 @@
         if (sessionStorage.getItem("cityTo")) { ///run function getData() when page loads if we already have destination
             getData();
         }
-
-
         document.querySelector(".ba-button-search").onclick = getData;
 
         function getData() {
@@ -83,6 +81,18 @@
 $(document).ready(function () {
     var tickets = document.querySelectorAll('.ba-ticket');
     tickets.forEach(function name(ticket) {
+        $(ticket).on('click', function (e) {
+            console.log(this);
+            var stationTo = this.querySelector('.ba-station-to').innerText.split(' ').splice(1);
+            sessionStorage.setItem('stationTo', stationTo);
+            var departure = this.querySelector('#ba-departure').innerText;
+            sessionStorage.setItem('departure', departure);
+            var arrival = this.querySelector('#ba-arrival').innerText;
+            sessionStorage.setItem('arrival', arrival);
+            var ticketCost = this.querySelector('.ba-ticket__cost').innerText.split(' ')[0];
+            sessionStorage.setItem('ticketCost', ticketCost);
+
+        })
 
     })
 });

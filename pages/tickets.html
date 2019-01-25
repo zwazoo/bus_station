@@ -189,12 +189,12 @@
         
                                 <div class="ba-col-large-3 ba-col-medium-4 ba-col-small-12 ba-ticket__from-to">
                                     <div class="ba-ticket__block-time">
-                                        <p class="ba-ticket__time">{{departuretime}}</p>
+                                        <p class="ba-ticket__time" id="ba-departure">{{departuretime}}</p>
                                         <p class="ba-ticket__date">{{date}}</p>
                                     </div>
                                     <div class="ba-ticket__block-city">
                                         <p class="ba-ticket__city">Полтава</p>
-                                        <p>від: Полтава АС-1</p>
+                                        <p class="ba-station-from">від: Полтава АС-1</p>
                                     </div>
                                     <p class="ba-ticket__free-places">Вiльних місць: <span>10</span></p>
                                 </div>
@@ -213,10 +213,10 @@
                                 <div class="ba-col-large-3 ba-col-medium-4 ba-col-small-12 ba-ticket__from-to ba-ticket__from-to--destination">
                                     <div class="ba-ticket__block-city">
                                         <p class="ba-ticket__city">{{city}}</p>
-                                        <p>до: {{station}}</p>
+                                        <p class='ba-station-to'>до: {{station}}</p>
                                     </div>
                                     <div class="ba-ticket__block-time">
-                                        <p class="ba-ticket__time">{{arrivaltime}}</p>
+                                        <p class="ba-ticket__time" id="ba-arrival">{{arrivaltime}}</p>
                                         <p class="ba-ticket__date">{{date}}</p>
                                     </div>
                                     <div class="ba-ticket__cost-block">

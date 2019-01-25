@@ -94,11 +94,11 @@
                         <div class="ba-col-small-12 ba-col-large-12 flex-container--center hide-mobile ">
                             <span class="ba-date">Час
                                 і дата:</span>
-                            <span>08:20, 21.08, Вт</span>
+                            <span id="department">08:20, 21.08, Вт</span>
                             <svg class="svg-line" width="24" height="1" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <line x1="4.37114e-08" y1="0.5" x2="24" y2="0.500002" stroke="#2C5A71" />
                             </svg>
-                            <span>14:00, 21.08,Вт</span></div>
+                            <span id="arrival">14:00, 21.08,Вт</span></div>
                     </div>
                     <!-- /.ba-col-small-12 ba-col-large-6 ba-order-details__info-->
                     <div class="ba-col-small-12 ba-col-large-6 ba-order-details__price">
@@ -127,24 +127,29 @@
                 <div class="ba-passengers-data">
                     <h2 class="ba-subtitle">Дані пасажирів</h2>
                     <form class="ba-submit-form" action="#">
-                        <div class="ba-passenger-info main-passenger">
-                            <p class="ba-subtitle">Пасажир 1</p>
-                            <input class="submit-form-input ba-col-small-12 ba-col-large-3" type="text" name="pass-name-main"
-                                id="pass-name" placeholder="Ім'я">
-                            <input class="submit-form-input ba-col-small-12 ba-col-large-3" type="text" name="pass-surname-main"
-                                id="pass-surname" placeholder="Прізвище">
-                            <input class="submit-form-input ba-col-small-12 ba-col-large-3" type="text" name="pass-phone"
-                                id="pass-phone" placeholder="Телефон">
-                            <input class="submit-form-input ba-col-small-12 ba-col-large-3" type="text" name="pass-email"
-                                id="pass-email" placeholder="Email">
+                        <div class="ba-passengers">
+                            <div class="ba-passenger-info main-passenger">
+                                <p class="ba-subtitle">Пасажир 1</p>
+                                <input class="submit-form-input ba-col-small-12 ba-col-large-3" type="text" name="pass-name-main"
+                                    id="pass-name" placeholder="Ім'я">
+                                <input class="submit-form-input ba-col-small-12 ba-col-large-3" type="text" name="pass-surname-main"
+                                    id="pass-surname" placeholder="Прізвище">
+                                <input class="submit-form-input ba-col-small-12 ba-col-large-3" type="text" name="pass-phone"
+                                    id="pass-phone" placeholder="Телефон">
+                                <input class="submit-form-input ba-col-small-12 ba-col-large-3" type="text" name="pass-email"
+                                    id="pass-email" placeholder="Email">
+                            </div>
                         </div>
-                        <div class="ba-passenger-info">
-                            <p class="ba-subtitle">Пасажир 2</p>
+                        <script type="text/template" id="passenger-tmpl">
+
+                            <div class="ba-passenger-info">
+                            <p class="ba-subtitle">Пасажир {{nth-passenger}}</p>
                             <input class="submit-form-input ba-col-small-12 ba-col-large-3" type="text" name="pass-name-2"
                                 id="pass-name-2" placeholder="Ім'я">
                             <input class="submit-form-input ba-col-small-12 ba-col-large-3" type="text" name="pass-surname-2"
                                 id="pass-surname-2" placeholder="Прізвище">
                         </div>
+                    </script>
                         <div class="ba-submit-agreement">
                             <input class="submit-form-input" type="checkbox" id="agreement" name="agreement" checked>
                             <label class="ba-form-agreement" for="agreement">Я приймаю умови публічної оферти, політки
@@ -155,7 +160,7 @@
                         <div class="section-underline"></div>
                         <button class="ba-button ba-button-cancel">Скасувати оплату</button>
                         <p class="ba-subtitle">
-                            До сплати: за <span data-ticket-qty>2 </span><span data-ticket-declension>квитка</span>
+                            До сплати: за <span class="pay-ticket-qty">1</span><span data-ticket-declension></span>
                         </p>
                         <div class="ba-row">
                             <div class="ba-col-large-5">
