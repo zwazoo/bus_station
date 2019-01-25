@@ -8,8 +8,10 @@
     const ticketsList = document.querySelector('.ba-tickets'),
         dateTicket = document.querySelector('.ba-tickets-date'),
         toCity = document.querySelector('.ba-tickets-direction__to'),
+        fromCity = document.querySelector('.ba-tickets-direction__from'),
         ticketsTmpl = document.querySelector('#li-tmpl').innerHTML,
         cityTmpl = document.querySelector('#li-tmpl1').innerHTML,
+        city0Tmpl = document.querySelector('#li-tmpl3').innerHTML,
         dateTmpl = document.querySelector('#li-tmpl0').innerHTML;
 
 
@@ -31,6 +33,7 @@
             let ticketsListHTML = "";
             let dateHTML = "";
             let cityHTML = "";
+            let city0HTML = "";
 
             let date = sessionStorage.getItem("date"); ////getting date and city from sessionStorage, sessionStorage values update after each input change
             let city = sessionStorage.getItem("cityTo");
@@ -68,11 +71,14 @@
             //change city on top,after breadcrumbs
             cityHTML += cityTmpl
                 .replace(/{{toCity}}/ig, city)
+            city0HTML += city0Tmpl
+                .replace(/{{fromCity}}/ig, cityFrom)
 
             //added changes in html
             ticketsList.innerHTML = ticketsListHTML;
             dateTicket.innerHTML = dateHTML;
             toCity.innerHTML = cityHTML;
+            fromCity.innerHTML = city0HTML;
             tickets = document.querySelectorAll('.ba-ticket');
             console.log(tickets);
 
