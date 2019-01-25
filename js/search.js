@@ -34,6 +34,8 @@
 
             let date = sessionStorage.getItem("date"); ////getting date and city from sessionStorage, sessionStorage values update after each input change
             let city = sessionStorage.getItem("cityTo");
+            let cityFrom = sessionStorage.getItem("cityFrom");
+
 
 
             data.forEach(function (cities) {
