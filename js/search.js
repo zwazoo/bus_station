@@ -3,9 +3,6 @@
 ;
 (function () {
     "use strict";
-    var tickets;
-
-
     const xhr = new XMLHttpRequest();
 
     const ticketsList = document.querySelector('.ba-tickets'),
@@ -30,7 +27,7 @@
         document.querySelector(".ba-button-search").onclick = getData;
 
         function getData() {
-
+            var tickets;
             let ticketsListHTML = "";
             let dateHTML = "";
             let cityHTML = "";
@@ -75,22 +72,24 @@
             dateTicket.innerHTML = dateHTML;
             toCity.innerHTML = cityHTML;
             tickets = document.querySelectorAll('.ba-ticket');
+            console.log(tickets);
+
+            tickets.forEach(function name(ticket) {
+                $(ticket).on('click', function (e) {
+                    console.log(e);
+                    var stationTo = this.querySelector('.ba-station-to').innerText.split(' ').splice(1);
+                    sessionStorage.setItem('stationTo', stationTo);
+                    var departure = this.querySelector('#ba-departure').innerText;
+                    sessionStorage.setItem('departure', departure);
+                    var arrival = this.querySelector('#ba-arrival').innerText;
+                    sessionStorage.setItem('arrival', arrival);
+                    var ticketCost = this.querySelector('.ba-ticket__cost').innerText.split(' ')[0];
+                    sessionStorage.setItem('ticketCost', ticketCost);
+                });
+            });
+
         }
 
-        console.log(tickets);
-        tickets.forEach(function name(ticket) {
-            $(ticket).on('click', function (e) {
-                console.log(e);
-                var stationTo = this.querySelector('.ba-station-to').innerText.split(' ').splice(1);
-                sessionStorage.setItem('stationTo', stationTo);
-                var departure = this.querySelector('#ba-departure').innerText;
-                sessionStorage.setItem('departure', departure);
-                var arrival = this.querySelector('#ba-arrival').innerText;
-                sessionStorage.setItem('arrival', arrival);
-                var ticketCost = this.querySelector('.ba-ticket__cost').innerText.split(' ')[0];
-                sessionStorage.setItem('ticketCost', ticketCost);
-            });
-        });
     };
 
 })();
