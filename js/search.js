@@ -82,7 +82,6 @@ $(document).ready(function () {
     var tickets = document.querySelectorAll('.ba-ticket');
     tickets.forEach(function name(ticket) {
         $(ticket).on('click', function (e) {
-            console.log(this);
             var stationTo = this.querySelector('.ba-station-to').innerText.split(' ').splice(1);
             sessionStorage.setItem('stationTo', stationTo);
             var departure = this.querySelector('#ba-departure').innerText;
@@ -92,7 +91,7 @@ $(document).ready(function () {
             var ticketCost = this.querySelector('.ba-ticket__cost').innerText.split(' ')[0];
             sessionStorage.setItem('ticketCost', ticketCost);
 
-        })
+        });
 
-    })
+    });
 });
