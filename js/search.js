@@ -73,9 +73,9 @@
             ticketsList.innerHTML = ticketsListHTML;
             dateTicket.innerHTML = dateHTML;
             toCity.innerHTML = cityHTML;
-
+            var tickets = document.querySelectorAll('.ba-ticket');
         }
-        var tickets = document.querySelectorAll('.ba-ticket');
+
         console.log(tickets);
         tickets.forEach(function name(ticket) {
             $(ticket).on('click', function (e) {
