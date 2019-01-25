@@ -81,6 +81,7 @@
     tickets.forEach(function name(ticket) {
         console.log(ticket);
         $(ticket).on('click', function (e) {
+            e.preventDefault();
             console.log(this);
             var stationTo = this.querySelector('.ba-station-to').innerText.split(' ').splice(1);
             sessionStorage.setItem('stationTo', stationTo);
