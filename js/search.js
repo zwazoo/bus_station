@@ -3,6 +3,7 @@
 ;
 (function () {
     "use strict";
+    var tickets;
 
 
     const xhr = new XMLHttpRequest();
@@ -73,7 +74,7 @@
             ticketsList.innerHTML = ticketsListHTML;
             dateTicket.innerHTML = dateHTML;
             toCity.innerHTML = cityHTML;
-            var tickets = document.querySelectorAll('.ba-ticket');
+            tickets = document.querySelectorAll('.ba-ticket');
         }
 
         console.log(tickets);
