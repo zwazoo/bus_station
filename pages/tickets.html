@@ -160,9 +160,9 @@
                             <div class="ba-tickets-info__main">
                                 <span>Сортувати:</span>
                                 <select name="sorting" class="ba-tickets-info__select">
-                                    <option value="by price" selected>за ціною</option>
-                                    <option value="travel time">за часом у дорозі</option>
-                                    <option value="departure time">за відправленням</option>
+                                    <option value="price" selected>за ціною</option>
+                                    <option value="travel_time">за часом у дорозі</option>
+                                    <option value="departure_time">за відправленням</option>
                                 </select>
                             </div>
                             <!-- /.ba-tickets-info__main -->
@@ -175,7 +175,7 @@
 
                 <ul class="ba-tickets">
                     <script type="text/template" id="li-tmpl">
-                        <li class="ba-tickets__item">
+                        <li class="ba-tickets__item" data-id="{{cost}}">
                         <div class="ba-ticket">
                             <div class="ba-row ba-ticket__main">
                                 <div class="ba-col-large-3 ba-col-medium-12 ba-col-small-12 ba-ticket__bus">
